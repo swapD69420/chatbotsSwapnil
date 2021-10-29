@@ -660,20 +660,7 @@ display:none;
     }
 </script>
 <script>
-   function showEmbeddedDiv(el){
-        var resultEmbServ = embedded_svc.bootstrapEmbeddedService();
-        var chatWindow = document.getElementsByClassName("dockableContainer")[0];
-        if(el.className.indexOf("minimized")>-1) {
-            el.classList.remove("minimized");
-            chatWindow.classList.add("hideDockablecontainer");
-        } else {
-            el.classList.add("minimized");
-            if(chatWindow  != undefined) {
-                chatWindow.classList.remove("hideDockablecontainer");
-            }
-        }
-           
-    }
+   
     if (window.addEventListener) {
         addEventListener('message', messageListener, false);}
     else {
