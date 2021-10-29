@@ -19,8 +19,118 @@ http://www.tooplate.com/view/2056-simple-life
 $(document).ready(function () {
 $.localScroll();
 });
-</script> 
+</script> 	
+
+<script>
+   function initialBotLoad(e) {
+    if (e.srcElement.innerHTML == "Go Back" || e.srcElement.innerHTML == "Confirm End Chat") {
+        getMenuListIndex();
+    }
+}
+
+function getMenuListIndex() {
+    var len = document.getElementsByClassName("rich-menu-items").length;
+    for (var i = 0; i < len; i++) {
+        if (document.getElementsByClassName("rich-menu-items")[i].children[0].innerText == "$$MainMenu$$") {
+            var index = i;
+            formatMainMenu(i);
+        }
+    }
+}
+
+function formatMainMenu(classIndex) {
+    document.getElementsByClassName("rich-menu-items")[classIndex].classList.add("main-menu-list");
+}
+
+function messageListener(e) {
+    if ("method" in e.data && e.data.method == "liveagent.restored") {
+        var cssFa = document.createElement('link');
+        cssFa.href = '/css/GenotropinEinsteinBot.min.css';
+        cssFa.rel = 'stylesheet';
+        cssFa.type = 'text/css';
+        document.getElementsByTagName('head')[0].appendChild(cssFa);
+        var iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
+        iconEle.classList.add("minimized");
+        getMenuListIndex();
+    }
+
+    if ("method" in e.data && e.data.method == "session.updatePrimary") {
+        if (document.getElementById("chatbot-new-header") == null) {
+            var newElement = document.createElement("div");
+            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <span>(somatropin)<br> Virtual Assistant </span></div>';
+            document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
+            var cssFa = document.createElement('link');
+            cssFa.href = '/css/GenotropinEinsteinBot.min.css';
+            cssFa.rel = 'stylesheet';
+            cssFa.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(cssFa);
+        }
+    }
+    if (e.data.data.event == "agentRichMessage") {
+        if (e.data.data.params.items[0].text == "$$MainMenu$$") {
+            var classIndex = document.getElementsByClassName("rich-menu-items").length - 1;
+            formatMainMenu(classIndex);
+        }
+    }
+
+
+    /* handle minimize icon change on close button click */
+    if ("method" in e.data && e.data.method == "session.deletedSessionData") {
+        if (e.data.data.indexOf("ESW_IS_MINIMIZED") != -1) {
+            var el = document.getElementsByClassName("chatbotStickyIcon")[0];
+            var chatWindow = document.getElementsByClassName("dockableContainer")[0];
+            el.classList.remove("minimized");
+            chatWindow.classList.remove("hideDockablecontainer");
+        }
+    }
+
+    if (e.data && typeof e.data === 'string') {
+        if (e.data.indexOf('ChatEstablished') != -1) {
+            var message = {
+                type: 'ChatEstablished',
+                chatKey: liveagent.chasitor.getChatKey()
+            };
+            window.opener.top.postMessage(message, '*');
+        }
+        else if (e.data.indexOf('ChatEnded') != -1) {
+            var message = {
+                type: 'ChatEnded',
+                chatKey: liveagent.chasitor.getChatKey()
+            };
+            window.opener.top.postMessage(message, '*');
+        }
+    }
+}
 </head>
+function showEmbeddedDiv(el) {
+    var resultEmbServ = embedded_svc.bootstrapEmbeddedService();
+    var chatWindow = document.getElementsByClassName("dockableContainer")[0];
+    if (el.className.indexOf("minimized") > -1) {
+        el.classList.remove("minimized");
+        chatWindow.classList.add("hideDockablecontainer");
+    } else {
+        el.classList.add("minimized");
+        if (chatWindow != undefined) {
+            chatWindow.classList.remove("hideDockablecontainer");
+        }
+    }
+
+}
+
+
+if (window.addEventListener) {
+    addEventListener('message', messageListener, false);
+}
+else {
+    attachEvent('onmessage', messageListener);
+}
+
+document.addEventListener("click", initialBotLoad, false);
+    
+    
+</script>
+ 
+<button class="stickyIcon" onclick = "showEmbeddedDiv(this)"><img class="stickyImage"></img></button>		
 <script type='text/javascript'>
 		
 	function bootstraphidechat(nav){
