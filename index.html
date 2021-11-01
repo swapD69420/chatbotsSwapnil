@@ -229,6 +229,12 @@ $.localScroll();
 	
 	
 <style type='text/css'>
+
+body .dockableContainer *{
+ font-family: "akzidenz-grotesk-pro" !important;
+ font-size: 14px;
+}	
+	
 body .dockableContainer * {
 box-sizing: border-box
 }
@@ -306,15 +312,16 @@ font-weight: 700;
 display: none;
 }
 .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
-    position: relative;
-    bottom: 10vh;
-    z-index: 9999;
-    text-align: left;
-    left: 11vh;
-    color: #fff;
-    font-weight: bold;
-    width: 57%;
+position: absolute;
+top: 18px;
+z-index: 9999;
+text-align: left;
+left: 70px;
+color: #fff;
+line-height: 1;
+font-weight: bold;
 }
+	
 .dockableContainer embeddedservice-chat-header div:last-child span {
 display: block;
 font-size: 12px;
