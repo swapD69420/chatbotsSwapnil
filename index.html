@@ -4,9 +4,10 @@
 
 
  <body>
-<button class="stickyIcon" onclick = "showEmbeddedDiv(this)"><img class="stickyImage"></img></button>		
+<button class="chatbotStickyIcon" onclick = "showEmbeddedDiv(this)"><img class="stickyImage" src="https://pfizerpatientservices--helpdesk--c.visualforce.com/resource/1635411532000/Gen_Image"></img></button> 
 </body>		
 <head>
+	
 <style type='text/css'>
 body .dockableContainer * {
 box-sizing: border-box
@@ -250,7 +251,7 @@ text-align: left;
 font-weight: 550;
 color: #0072cf;
 text-transform: uppercase;
-font-size: 100%;
+font-size: 75%;
 padding-left: 0;
 padding-right: 0;
 margin-right: 0
@@ -385,27 +386,24 @@ color: #0072cf
 .embeddedServiceLiveAgentStateChat .messageArea:focus {
 border: 0 solid #fff
 }
-button.stickyIcon { 
+button.chatbotStickyIcon { 
 position: fixed;    
 bottom: 1vh;    
 right: 1vh; 
 border: none;   
 }   
-.stickyImage { 
+button.chatbotStickyIcon img { 
 height: 8vh;    
 width: 12vh;    
 border-radius: 2vh; 
 cursor: pointer;    
- src="https://pfizerpatientservices--helpdesk--c.visualforce.com/resource/1635411628000/Gen_Image?";
+
 }   
-button.stickyIcon.minimized img {   
+button.chatbotStickyIcon.minimized img {   
 content: url(https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/20-512.png);    
 width: 10vh;    
 }  
-.embeddedServiceSidebar.layout-docked .dockableContainer.hideDockablecontainer,
-.embeddedServiceSidebar.layout-float .dockableContainer.hideDockablecontainer {
-display: none
-}
+
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
 position: fixed;
@@ -413,6 +411,12 @@ bottom: 20vh!important;
 right: 60px;
 height: 70vh;
 }
+
+.embeddedServiceSidebar.layout-docked .dockableContainer.hideDockablecontainer,
+.embeddedServiceSidebar.layout-float .dockableContainer.hideDockablecontainer {
+display: none
+}
+
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
@@ -427,25 +431,128 @@ display:none;
 .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]{
 display:none;
 }
+
+
+
+
+
+.cb-nav-container {
+  background-color: #ebebeb;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 40px;
+  align-items: center;
+  padding: 0;
+  border: 1px solid #b6b6b6;
+}
+
+.cb-nav-item {
+  list-style: none;
+  flex: 1;
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #b6b6b6;
+}
+
+.cb-nav-item:last-child {
+  border-right: 0px solid black;
+}
+
+.cb-nav-item a {
+  text-decoration: none;
+  color: grey;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+ #cb-dynamic-nav-list {
+        display: flex;
+    }
+
+
+
 @media all and (max-width: 1200px) and (min-width: 200px) {
-            .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
-               height: 75%;
-                max-height: 100%;
-                max-width: 94%;
-               width: 100%;
-               right:3%;
-               left: 3%;
-            }   
-        }
-        
-        
-        .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
-    position: fixed; 
-    bottom: 30%;
-            }
+.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, 
+.embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer 
+{ 
+    height: 75%; 
+    max-height: 100%; 
+    max-width: 94%; 
+    width: 100%; 
+    right:3%; 
+    left: 3%; 
+}
+}
+@media all and (max-width: 767px) {
+    #cb-dynamic-nav-list {
+        display: flex;
+    }
+}
 </style>
 	
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+  
+    
+    var initESW = function(gslbBaseURL) {
+        embedded_svc.settings.displayHelpButton = false; //Or false
+        embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
+        //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+        //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+        //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+        // Settings for Chat
+        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+            // Returns a valid button ID.
+        //};
+        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+            
+            embedded_svc.init(
+            'https://pfizerpatientservices--helpdesk.my.salesforce.com',
+            'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
+            gslbBaseURL,
+            '00D22000000DPhW',
+            'Genotropin_Group',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
+                deploymentId: '572220000008PQP',
+                buttonId: '573220000008ORC',
+                baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Genotropin_Group',
+                isOfflineSupportEnabled: false
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://pfizerpatientservices--helpdesk.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
 <script>
    function initialBotLoad(e) {
     if (e.srcElement.innerHTML == "Go Back" || e.srcElement.innerHTML == "Confirm End Chat") {
@@ -469,13 +576,12 @@ function formatMainMenu(classIndex) {
 
 function messageListener(e) {
     if ("method" in e.data && e.data.method == "liveagent.restored") {
-        var cssFa = document.createElement('link');
-        cssFa.href = '/css/GenotropinEinsteinBot.min.css';
-        cssFa.rel = 'stylesheet';
-        cssFa.type = 'text/css';
-        document.getElementsByTagName('head')[0].appendChild(cssFa);
+        appendCSS();
         var iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
-        iconEle.classList.add("minimized");
+        alert('min here');
+        if(globVar){
+            iconEle.classList.add("minimized");
+        }
         getMenuListIndex();
     }
 
@@ -484,11 +590,7 @@ function messageListener(e) {
             var newElement = document.createElement("div");
             newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <span>(somatropin)<br> Virtual Assistant </span></div>';
             document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
-            var cssFa = document.createElement('link');
-            cssFa.href = '/css/GenotropinEinsteinBot.min.css';
-            cssFa.rel = 'stylesheet';
-            cssFa.type = 'text/css';
-            document.getElementsByTagName('head')[0].appendChild(cssFa);
+            appendCSS();
         }
     }
     if (e.data.data.event == "agentRichMessage") {
@@ -505,6 +607,7 @@ function messageListener(e) {
             var el = document.getElementsByClassName("chatbotStickyIcon")[0];
             var chatWindow = document.getElementsByClassName("dockableContainer")[0];
             el.classList.remove("minimized");
+            alert('line 598');
             chatWindow.classList.remove("hideDockablecontainer");
         }
     }
@@ -526,22 +629,27 @@ function messageListener(e) {
         }
     }
 }
+//Gloval variable Added by SF Team
+let globVar;
 
-function showEmbeddedDiv(el) {
+function showEmbeddedDiv(el) {alert();
     var resultEmbServ = embedded_svc.bootstrapEmbeddedService();
     var chatWindow = document.getElementsByClassName("dockableContainer")[0];
-    if (el.className.indexOf("minimized") > -1) {
+    if (el.className.indexOf("minimized") > -1) {alert('hide');
         el.classList.remove("minimized");
         chatWindow.classList.add("hideDockablecontainer");
-    } else {
+        
+        
+    } else { 
         el.classList.add("minimized");
-        if (chatWindow != undefined) {
+        if (chatWindow != undefined) { alert('show');
             chatWindow.classList.remove("hideDockablecontainer");
+            
         }
     }
-
+    globVar = true;
+    getMenuListIndex();
 }
-
 
 if (window.addEventListener) {
     addEventListener('message', messageListener, false);
@@ -551,111 +659,89 @@ else {
 }
 
 document.addEventListener("click", initialBotLoad, false);
-    
-    
 
-</script>
-<script type='text/javascript'>
-		
-	function bootstraphidechat(nav){
-		embedded_svc.bootstrapEmbeddedService();
-		var matches = document.getElementsByClassName("dockableContainer showDockableContainer");
-		for (var i=0; i<matches.length; i++) {
-			if (matches[i].style.display === "none") {
-   			 	matches[i].style.display = "flex";
-			 	
-				
-  			} else {
-    				matches[i].style.display = "none";
-				
-			}
-			
-		}	
-      }
-	
-function toggle(el){
-    if(el.className!="minimised")
-    {
-        el.src='images/chat_minimsed1.png';
-        el.className="minimised";
-	bootstraphidechat();    
+/*All the below Code added by SF Team -Need review from Vasundhara*/
+embedded_svc.addEventHandler("afterMaximize",function(data){
+    /*if(/Android|webOS|iPad|iPhone|iPod|Blackberry/i.test(navigator.userAgent)) {
+        appendCSS();
+        displayPI();
+        checkBOT();
+    }*/
+    alert(window.innerWidth);
+    if(window.innerWidth > 767) {
+        
+         appendCSS();
+        displayPI();
+        checkBOT();
     }
-    else if(el.className=="minimised")
-    {
-        el.src='images/chatlogo1.png';
-        el.className="chatopen";
-	bootstraphidechat(); 
-	el.src='images/chatlogo1.png';   
-    }
-    
-    return false;
+});
+
+function appendCSS(){
+    var cssFa = document.createElement('link');
+    cssFa.href = '/css/GenotropinEinsteinBot.min.css';
+    cssFa.rel = 'stylesheet';
+    cssFa.type = 'text/css';
+    document.getElementsByTagName('head')[0].appendChild(cssFa);
+}
+let navDiv, navList, navItem, anchorItem;
+
+// getting links for the navbar
+async function fetchLinksJSON() {
+    const response = await fetch("https://json-aws-testing.s3.us-east-2.amazonaws.com/data.json");
+    const jsonData = await response.json();
+    //return jsonData;
+     return {
+    "Full Prescribing Informatiovn": "https://www.pfizer.com/",
+    "Patient Prescribing Information": "https://www.pfizer.com/health-wellness"
+    };
 }
 
 
 
+//onload is because script runs before body has loaded
+//cant append to null body
+
+function displayPI(){alert(document.getElementById("cb-dynamic-nav-list"));
+    if(!document.getElementById("cb-dynamic-nav-list")){
+        navList = document.createElement('ul');
+        navList.className = 'cb-nav-container';
+        navList.id = 'cb-dynamic-nav-list';
+
+        navDiv = document.createElement("div");
+        navDiv.appendChild(navList);
+        document.body.appendChild(navDiv);
+        fetchLinksJSON().then(function(jsonData){
+        for (elem in jsonData){
+            anchorItem = document.createElement('a');
+            anchorItem.innerHTML = elem;
+            anchorItem.href = jsonData[elem];
+            anchorItem.target = "_blank";    
+            navItem = document.createElement('li');
+            navItem.className = 'cb-nav-item';
+            navItem.appendChild(anchorItem);
+            navList.appendChild(navItem);
+        }
+        })
+        .catch(error => console.error('Err>>',error))   
+        let dockable = document.getElementsByClassName("dockableContainer")[0];
+        dockable.prepend(navList);
+    }
+}
+
+function checkBOT() {
+    getMenuListIndex();
+    //NEED TO ADD CONDITION ONLY FOR MOBILE SCREEN
+    if(globVar==undefined){ 
+        var el = document.getElementsByClassName("chatbotStickyIcon")[0]; 
+        el.classList.remove("minimized");
+        var chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
+        chatWindow.classList.add("hideDockablecontainer");
+    }            
+} 
+    
+</script>
 
 	
-</script>
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type='text/javascript'>
-    var initESW = function(gslbBaseURL) {
-        embedded_svc.settings.displayHelpButton = true; //Or false
-        embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
-        //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-        //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-        embedded_svc.settings.loadingText = '';
-        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-        // Settings for Chat
-        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-            // Returns a valid button ID.
-        //};
-        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
-        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-        embedded_svc.settings.entryFeature = 'LiveAgent';
-
-        embedded_svc.init(
-            'https://pfizerpatientservices--helpdesk.my.salesforce.com',
-            'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
-            gslbBaseURL,
-            '00D22000000DPhW',
-            'Genotropin_Group',
-            {
-                baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
-                deploymentId: '572220000008PQP',
-                buttonId: '573220000008ORC',
-                baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Genotropin_Group',
-                isOfflineSupportEnabled: false
-            }
-        );
-    
-	     embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
-    	var matches = document.getElementsByClassName("minimised");
-		for (var i=0; i<matches.length; i++) {
-		     console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was ");
-			matches[i].src = 'images/chatlogo1.png';
-		}
-		});
-    };	  
-
-    if (!window.embedded_svc) {
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://pfizerpatientservices--helpdesk.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-        s.onload = function() {
-            initESW(null);
-        };
-        document.body.appendChild(s);
-    } else {
-        initESW('https://service.force.com');
-    }
-</script>
 </head>
 
 
