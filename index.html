@@ -639,6 +639,7 @@ position: fixed;
 bottom: 18vh!important;
 top: 0;
 height: 70vh;
+border-radius: 0px	
 }
 
 .embeddedServiceSidebar.layout-docked .dockableContainer.hideDockablecontainer,
@@ -720,7 +721,12 @@ display:none;
 	color: #fff;
 	line-height: 1;
 	font-weight: bold;
-}	
+}
+	
+.embeddedServiceSidebar.layout-docked .dockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer { 
+	margin: 0;
+	max-width: 100%;
+}
 	
 }
 </style>
