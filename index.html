@@ -722,14 +722,14 @@ font-weight : bold;
         display: flex;
     }
    .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
-	position: absolute;
-	top: 18px;
-	z-index: 9999;
-	text-align: left;
-	left: 70px;
-	color: #fff;
-	line-height: 1;
-	font-weight: bold;
+    position: absolute;
+    top: 11px;
+    z-index: 9999;
+    text-align: left;
+    left: 79px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
 }
 	
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer { 
@@ -836,7 +836,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
             var newElement = document.createElement("div");
-            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <span>(somatropin)<br> Virtual Assistant </span></div>';
+            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin)</span><br><span> Virtual Assistant </span></p></div>';
             document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
