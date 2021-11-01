@@ -714,7 +714,9 @@ font-weight : bold;
 	background: none;
 	color: #0072cf;
 }	
-	
+.dockableContainer embeddedservice-chat-header div#chatbot-new-header span:nth-child(1){
+	opacity: 0.7;
+	}	
 	
 
 @media all and (max-width: 767px) {
@@ -836,7 +838,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
             var newElement = document.createElement("div");
-            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin)</span><br><span> Virtual Assistant </span></p></div>';
+            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin)</span><span> Virtual Assistant </span></p></div>';
             document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
