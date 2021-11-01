@@ -626,7 +626,7 @@ width: 10vh;
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
 position: fixed;
 bottom: 18vh!important;
-right: 60px;
+top: 12vh;
 height: 70vh;
 }
 
@@ -693,7 +693,7 @@ display:none;
   text-align: center;
 }
  #cb-dynamic-nav-list {
-        display: flex;
+        display: none;
     }
 
 @media all and (max-width: 767px) {
@@ -872,7 +872,7 @@ embedded_svc.addEventHandler("afterMaximize",function(data){
         checkBOT();
     }*/
     alert(window.innerWidth);
-    if(window.innerWidth > 767) {
+    if(window.innerWidth < 767) {
         
          appendCSS();
         displayPI();
