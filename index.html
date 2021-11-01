@@ -820,7 +820,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         var iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
-        alert('min here');
+       
         if(globVar){
             iconEle.classList.add("minimized");
         }
@@ -849,7 +849,7 @@ function messageListener(e) {
             var el = document.getElementsByClassName("chatbotStickyIcon")[0];
             var chatWindow = document.getElementsByClassName("dockableContainer")[0];
             el.classList.remove("minimized");
-            alert('line 598');
+           
             chatWindow.classList.remove("hideDockablecontainer");
         }
     }
@@ -874,17 +874,17 @@ function messageListener(e) {
 //Gloval variable Added by SF Team
 let globVar;
 
-function showEmbeddedDiv(el) {alert();
+function showEmbeddedDiv(el) {
     var resultEmbServ = embedded_svc.bootstrapEmbeddedService();
     var chatWindow = document.getElementsByClassName("dockableContainer")[0];
-    if (el.className.indexOf("minimized") > -1) {alert('hide');
+    if (el.className.indexOf("minimized") > -1) {
         el.classList.remove("minimized");
         chatWindow.classList.add("hideDockablecontainer");
         
         
     } else { 
         el.classList.add("minimized");
-        if (chatWindow != undefined) { alert('show');
+        if (chatWindow != undefined) {
             chatWindow.classList.remove("hideDockablecontainer");
             
         }
@@ -909,7 +909,7 @@ embedded_svc.addEventHandler("afterMaximize",function(data){
         displayPI();
         checkBOT();
     }*/
-    alert(window.innerWidth);
+  
     if(window.innerWidth < 767) {
         
          appendCSS();
@@ -943,7 +943,7 @@ async function fetchLinksJSON() {
 //onload is because script runs before body has loaded
 //cant append to null body
 
-function displayPI(){alert(document.getElementById("cb-dynamic-nav-list"));
+function displayPI(){
     if(!document.getElementById("cb-dynamic-nav-list")){
         navList = document.createElement('ul');
         navList.className = 'cb-nav-container';
