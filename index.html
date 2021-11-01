@@ -821,7 +821,7 @@ function messageListener(e) {
         appendCSS();
         var iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
        
-        if(globVar){
+        if(window.innerWidth > 768){
             iconEle.classList.add("minimized");
         }
         getMenuListIndex();
@@ -933,8 +933,8 @@ async function fetchLinksJSON() {
     const jsonData = await response.json();
     //return jsonData;
      return {
-    "Full Prescribing Informatiovn": "https://www.pfizer.com/",
-    "Patient Prescribing Information": "https://www.pfizer.com/health-wellness"
+    "Prescribing Information": "https://www.pfizer.com/",
+    "Instructions for Use": "https://www.pfizer.com/health-wellness"
     };
 }
 
