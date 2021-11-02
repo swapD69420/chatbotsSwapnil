@@ -944,12 +944,12 @@ let navDiv, navList, navItem, anchorItem;
 
 // getting links for the navbar
 async function fetchLinksJSON() {
-    const response = await fetch("https://json-aws-testing.s3.us-east-2.amazonaws.com/data.json");
-    const jsonData = await response.json();
+   // const response = await fetch("https://json-aws-testing.s3.us-east-2.amazonaws.com/data.json");
+   // const jsonData = await response.json();
     //return jsonData;
      return {
-    "Prescribing Information": "https://www.pfizer.com/",
-    "Instructions for Use": "https://www.pfizer.com/health-wellness"
+    "Prescribing Information": "http://labeling.pfizer.com/ShowLabeling.aspx?id=577",
+    "Instructions for Use": "https://www.genotropin.com/how-to-use-genotropin"
     };
 }
 
