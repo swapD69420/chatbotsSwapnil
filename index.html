@@ -933,7 +933,7 @@ embedded_svc.addEventHandler("afterMaximize",function(data){alert();
     }
 });
 
-function appendCSS(){
+function appendCSS(){alert('apCSS');
     var cssFa = document.createElement('link');
     cssFa.href = '/css/GenotropinEinsteinBot.min.css';
     cssFa.rel = 'stylesheet';
@@ -958,7 +958,7 @@ async function fetchLinksJSON() {
 //onload is because script runs before body has loaded
 //cant append to null body
 
-function displayPI(){
+function displayPI(){alert('disppi');
     if(!document.getElementById("cb-dynamic-nav-list")){
         navList = document.createElement('ul');
         navList.className = 'cb-nav-container';
@@ -985,7 +985,7 @@ function displayPI(){
     }
 }
 
-function checkBOT() {
+function checkBOT() {alert('checkbot');
    // getMenuListIndex();
     //NEED TO ADD CONDITION ONLY FOR MOBILE SCREEN
     if(globVar==undefined){ 
@@ -993,7 +993,7 @@ function checkBOT() {
         el.classList.remove("minimized");
         var chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
         chatWindow.classList.add("hideDockablecontainer");
-    }            
+    }    alert('allend');        
 } 
     
 </script>
