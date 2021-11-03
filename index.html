@@ -834,8 +834,8 @@ function formatMainMenu(classIndex) {
     document.getElementsByClassName("rich-menu-items")[classIndex].classList.add("main-menu-list");
 }
 
-function messageListener(e) {alert('msg list');
-    if ("method" in e.data && e.data.method == "liveagent.restored") {alert('la restored');
+function messageListener(e) {
+    if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         var iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
        
@@ -845,7 +845,7 @@ function messageListener(e) {alert('msg list');
         getMenuListIndex();
     }
 
-    if ("method" in e.data && e.data.method == "session.updatePrimary") { alert('sesssion upd pri');
+    if ("method" in e.data && e.data.method == "session.updatePrimary") { 
         if (document.getElementById("chatbot-new-header") == null) {
             var newElement = document.createElement("div");
             newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin)</span><span> Virtual Assistant </span></p></div>';
@@ -853,7 +853,7 @@ function messageListener(e) {alert('msg list');
             appendCSS();
         }
     }
-    if (e.data.data.event == "agentRichMessage") {alert('agRich');
+    if (e.data.data.event == "agentRichMessage") {
         if (e.data.data.params.items[0].text == "$$MainMenu$$") {
             var classIndex = document.getElementsByClassName("rich-menu-items").length - 1;
             formatMainMenu(classIndex);
@@ -862,7 +862,7 @@ function messageListener(e) {alert('msg list');
 
 
     /* handle minimize icon change on close button click */
-    if ("method" in e.data && e.data.method == "session.deletedSessionData") { alert('ses del');
+    if ("method" in e.data && e.data.method == "session.deletedSessionData") { 
         if (e.data.data.indexOf("ESW_IS_MINIMIZED") != -1) {
             var el = document.getElementsByClassName("chatbotStickyIcon")[0];
             var chatWindow = document.getElementsByClassName("dockableContainer")[0];
@@ -872,7 +872,7 @@ function messageListener(e) {alert('msg list');
         }
     }
 
-    if (e.data && typeof e.data === 'string') { alert('strung');
+    if (e.data && typeof e.data === 'string') {
         if (e.data.indexOf('ChatEstablished') != -1) {
             var message = {
                 type: 'ChatEstablished',
@@ -892,7 +892,7 @@ function messageListener(e) {alert('msg list');
 //Gloval variable Added by SF Team
 let globVar;
 
-function showEmbeddedDiv(el) {alert('show emb');
+function showEmbeddedDiv(el) {
     var resultEmbServ = embedded_svc.bootstrapEmbeddedService();
     var chatWindow = document.getElementsByClassName("dockableContainer")[0];
     if (el.className.indexOf("minimized") > -1) {
@@ -921,7 +921,7 @@ else {
 document.addEventListener("click", initialBotLoad, false);
 
 /*All the below Code added by SF Team -Need review from Vasundhara*/
-embedded_svc.addEventHandler("afterMaximize",function(data){alert();
+embedded_svc.addEventHandler("afterMaximize",function(data){
     /*if(/Android|webOS|iPad|iPhone|iPod|Blackberry/i.test(navigator.userAgent)) {
         appendCSS();
         displayPI();
@@ -936,7 +936,7 @@ embedded_svc.addEventHandler("afterMaximize",function(data){alert();
     }
 });
 
-function appendCSS(){alert('apCSS');
+function appendCSS(){
     var cssFa = document.createElement('link');
     cssFa.href = '/css/GenotropinEinsteinBot.min.css';
     cssFa.rel = 'stylesheet';
@@ -961,7 +961,7 @@ async function fetchLinksJSON() {
 //onload is because script runs before body has loaded
 //cant append to null body
 
-function displayPI(){alert('disppi');
+function displayPI(){
     if(!document.getElementById("cb-dynamic-nav-list")){
         navList = document.createElement('ul');
         navList.className = 'cb-nav-container';
@@ -988,7 +988,7 @@ function displayPI(){alert('disppi');
     }
 }
 
-function checkBOT() {alert('checkbot');
+function checkBOT() {
    // getMenuListIndex();
     //NEED TO ADD CONDITION ONLY FOR MOBILE SCREEN
     if(globVar==undefined){ 
@@ -996,7 +996,7 @@ function checkBOT() {alert('checkbot');
         el.classList.remove("minimized");
         var chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
         chatWindow.classList.add("hideDockablecontainer");
-    }    alert('allend');        
+    }        
 } 
     
 </script>
