@@ -728,7 +728,9 @@ font-weight : bold;
 	opacity: 0.7;
 	}	
 
-
+.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer{
+ width:320px;
+}
 @media all and (max-width: 767px) {
     #cb-dynamic-nav-list {
         display: flex;
@@ -747,6 +749,7 @@ font-weight : bold;
 	
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer { 
 	margin: 0;
+	min-width:100%;
 	max-width: 100%;
 	max-height:100%;
 	height:80vh;
