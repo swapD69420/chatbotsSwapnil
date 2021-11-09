@@ -1007,8 +1007,14 @@ function checkBOT() {
     }        
 }
 function setBOTHeight(){
-	let iconHeight = parseInt(document.getElementById('block-views-isi-content-block-3').style.height) + 20;
-	let botHeight = (window.innerHeight - (iconHeight + 70 ))+ 'px';
+	let iSIHeight =  parseInt(document.getElementById('block-views-isi-content-block-3').style.height);
+	let iconHeight = iSIHeight + 20;
+	let botHeight;
+	if(window.innerWidth > 767){
+	botHeight = (window.outerHeight - (iconHeight + 70 ))+ 'px';
+	}else{
+	botHeight = (window.outerHeight - iSIHeight)+ 'px';
+	}
 	document.getElementsByClassName('dockableContainer')[0].style.bottom = iconHeight+70+'px';
 	document.getElementsByClassName('dockableContainer')[0].style.height = botHeight;
 }
