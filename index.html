@@ -1008,7 +1008,12 @@ function setBOTHeight(){
 	document.getElementsByClassName('dockableContainer')[0].style.bottom = iconHeight+70+'px';
 	document.getElementsByClassName('dockableContainer')[0].style.height = botHeight;
 }
-    
+	function loadicon(){
+		let chaticon = document.getElementsByClassName('chatbotStickyIcon')[0];
+		chaticon.style.bottom = parseInt(document.getElementById('block-views-isi-content-block-3').style.height) + 20+'px';
+	}
+    window.onload=loadicon();
+	
 </script>
 
 	
