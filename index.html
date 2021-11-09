@@ -1011,9 +1011,10 @@ function setBOTHeight(){
 	let iconHeight = iSIHeight + 20;
 	let botHeight;
 	if(window.innerWidth > 767){
-	botHeight = (window.outerHeight - (iconHeight + 70 ))+ 'px';
+
+	botHeight = (window.innerHeight - (iconHeight + 80 ))+ 'px';
 	}else{
-	botHeight = (window.outerHeight - iSIHeight)+ 'px';
+	botHeight = (window.innerHeight - (iSIHeight+10))+ 'px';
 	}
 	document.getElementsByClassName('dockableContainer')[0].style.bottom = iconHeight+70+'px';
 	document.getElementsByClassName('dockableContainer')[0].style.height = botHeight;
