@@ -927,7 +927,7 @@ embedded_svc.addEventHandler("afterMaximize",function(data){
         displayPI();
         checkBOT();
     }*/
-  
+   setBOTHeight();
     if(window.innerWidth < 767) {
         
          appendCSS();
@@ -997,7 +997,13 @@ function checkBOT() {
         var chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
         chatWindow.classList.add("hideDockablecontainer");
     }        
-} 
+}
+function setBOTHeight(){
+	let iconHeight = parseInt(document.getElementById('block-views-isi-content-block-3').style.height) + 20;
+	let botHeight = (window.innerHeight - (iconHeight + 70 ))+ 'px';
+	document.getElementsByClassName('dockableContainer')[0].style.bottom = iconHeight+70+'px';
+	document.getElementsByClassName('dockableContainer')[0].style.height = botHeight;
+}
     
 </script>
 
