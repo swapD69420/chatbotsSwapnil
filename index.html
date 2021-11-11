@@ -5,6 +5,9 @@
 
  <body>
 <button class="chatbotStickyIcon" onclick = "showEmbeddedDiv(this)"><img class="stickyImage" ></img></button> 
+		<br><br>
+		
+<button class="chatbotStickyIcon" onclick = "showEmbeddedDiv(this)"><img class="stickyImage" src="https://pfizerpatientservices--helpdesk--c.visualforce.com/resource/1635411532000/Gen_Image"></img></button> 
 
 		
 		
@@ -234,397 +237,8 @@ $.localScroll();
 	
 <style type='text/css'>
 
-body .dockableContainer *{
- font-family: "akzidenz-grotesk-pro" !important;
- font-size: 14px;
-}	
-	
-body .dockableContainer * {
-box-sizing: border-box
-}
-.dockableContainer .FAQComp,
-.dockableContainer .maincardTemp {
-border-radius: 8px;
-background: #eff9ff;
-text-align: left;
-margin-bottom : -16px;
-}
-.dockableContainer .FAQComp div,
-.dockableContainer .maincardTemp div {
-margin: 0;
-padding: 1em
-}
-.dockableContainer .maincardTemp .cardHeader {
-margin: 0;
-font-size: 14px
-}
-.dockableContainer .maincardTemp .cardBody a {
-background: #0072cf;
-padding: 10px;
-width: 100%;
-max-width: 100%;
-display: inline-block;
-color: #fff;
-text-decoration: none;
-box-sizing: border-box;
-border-radius: 22px;
-text-align: center;
-font-size: 13px
-}
-.dockableContainer .FAQComp {
-border: 1px solid #0072cf
-}
-.dockableContainer .FAQComp .FAQBody {
-border-top: 1.4px solid #0072cf;
-font-size: 14px
-}
-.dockableContainer .FAQComp .FAQHeader {
-background: #fff;
-border-top-left-radius: 8px;
-border-top-right-radius: 8px;
-font-size: 14px
-}
-.dockableContainer embeddedservice-chat-header {
-position: relative;
-padding: 0 14px;
-height: 100px;
-max-height: 70px;
-background-color: #0072cf
-}
-.dockableContainer embeddedservice-chat-header header .minimizeButton {
-display: none
-}
-.dockableContainer embeddedservice-chat-header header .closeButton {
-position: absolute;
-top: 5px;
-right: 0
-}
-.dockableContainer embeddedservice-chat-header header .closeButton svg {
-width: 14px;
-height: 14px
-}
-.dockableContainer embeddedservice-chat-header header.sidebarHeader {
-padding: 0
-}
-.dockableContainer embeddedservice-chat-header header.sidebarHeader img {
-max-width: 67px;
-margin-right: 0;
-max-height: 54px
-}
-.dockableContainer embeddedservice-chat-header header h2 {
-font-weight: 700;
-display: none;
-}
-.dockableContainer embeddedservice-chat-header div#chatbot-new-header {
-position: absolute;
-top: 18px;
-z-index: 9999;
-text-align: left;
-left: 70px;
-color: #fff;
-line-height: 1;
-font-weight: bold;
-font-size: 16px;	
-}
-	
-.dockableContainer embeddedservice-chat-header div#chatbot-new-header span {
-font-size: 12px;
-line-height: 1.3;	
-}
-	
-.dockableContainer embeddedservice-chat-header div:last-child span {
-display: block;
-font-size: 12px;
-font-weight: normal;
-}
-.dockableContainer embeddedservice-chat-header button.closeButton:hover:before {
-right: 0;
-top: 2px
-}
-body .dockableContainer a {
-color: #0095ff;
-text-decoration: none
-}
-.chatMessage .chatContent .chat-content.agent,
-li.wrapper.chatMessage.agent.withTimestamp.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage .chatContent {
-background: #eff9ff;
-border-radius: 8px;
-max-width: 100%;
-float: none;
-margin-left: 0;
-text-align: left
-}
-.embeddedServiceHelpButton .helpButton .uiButton {
-background-color: #0072cf;
-font-family: Arial, sans-serif
-}
-.embeddedServiceHelpButton .helpButton .uiButton:focus {
-outline: 1px solid #0072cf
-}
-.chasitorControls .chasitorText {
-display: none
-}
-.embeddedServiceLiveAgentStateChatInputFooter .chasitorControls {
-margin: 0
-}
-.embeddedServiceLiveAgentStateChatInputFooter.dynamicResizeTextOneRow {
-min-height: 0;
-height: 5px
-}
-.embeddedServiceSidebarExtendedHeader .content .message {
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem.agent .agentName {
-display: none
-}
-.embeddedServiceLiveAgentStateChat .endChatContainer .endChatButton {
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem .isLightningOutContext .avatar {
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeDotDivider,
-.embeddedServiceLiveAgentStateChatItem.agent .timeContent {
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeDotDivider,
-.embeddedServiceLiveAgentStateChatItem.agent .timeContent {
-display: none
-}
-.dockableContainer .chat-content[c-chatMsg_chatMsg] {
-max-width: 100%;
-padding: 10px;
-border-bottom-left-radius: 0;
-float: none;
-margin-left: 0
-}
-li.wrapper.chatMessage.chasitor.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage {
-padding: 0 3px 1px 18px;
-padding-top: 0;
-padding-right: 22px;
-padding-bottom: 0;
-padding-left: 6px;
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
-display: none
-}
-.dockableContainer .waitingMessage{
-color: #0072CF;
-font-size:12px;
-margin-left:3em;
-margin-right:3em;
-}
-.dockableContainer .waitingGreeting{
-font-size: 26px;
-color: #0072CF;
-}
-.dockableContainer .waitingGreeting:before,.dockableContainer .waitingGreeting:after{
-font-size:19px;
-font-weight:400;
-display: block;
-color: #0072CF;
-}
-.dockableContainer .waitingGreeting:before{
-content: 'Welcome to the ';
-}
-.dockableContainer .waitingGreeting:after{
-content: 'Virtual Assistant';
-word-wrap: break-word;
-}
-.dockableContainer .callBackText{
-background: #F4F4F4;
-text-align: left;
-font-weight:550;
-text-transform: uppercase;
-font-size: 12px;
-padding:1em;
-border-radius: 8px;
-margin-bottom: -18px;
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage {
-margin-bottom: 0
-}
-button.rich-button-item.uiButton--default.uiButton.embeddedServiceLiveAgentStateChatButtonItem {
-box-shadow: 0 0 0px 0 rgb(0 118 222 / 50%);
-}
-li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatButtonMessage {
-/*background-color: #eff9ff;*/
-border-radius: 0 0 10px 10px;
-/*margin-left: 18px;*/
-margin-top: -10px;
-/*width: 88.2%;*/
-padding : 0 18px;
-}
-li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatButtonMessage .chatContent {
-background: #eff9ff;
-display: flex;
-margin-left: 0;
-justify-content: center;
-max-width: 100%;
-border-bottom-left-radius: 8px;
-border-bottom-right-radius: 8px;
-padding-bottom: 10px
-}
-li.wrapper.chatMessage.agent.withTimestamp.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage {
-	/* background-color: #eff9ff;
-	padding-right: 0;
-	margin-left: 18px;
-	width: 90.7%;
-	*/
-border-radius: 10px 10px 0 0;
-padding:0 18px;
-}
-embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items1 li {
-border-right: none;
-border-left: none;
-border-bottom: 1px solid #000
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items1 li button {
-text-align: left;
-font-weight: 550;
-color: #0072cf;
-text-transform: uppercase;
-font-size: 75%;
-padding-left: 0;
-padding-right: 0;
-margin-right: 0
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items1 li:first-of-type {
-border-right: none;
-border-left: none;
-border-bottom: 1px solid #000
-}
-.embeddedServiceLiveAgentStateChatMenuMessage ul.rich-menu-items1 {
-border-top: 2px solid #000;
-border-bottom: 2px solid #000;
-border-radius: none
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage button {
-padding-left: 5%;
-padding-right: 12%;
-margin-right: 8%;
-text-align: left;
-font-size: 14px
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item {
-margin-top: 10px;
-padding: 5px 0;
-min-width: 43%;
-text-align: center;
-border-radius: 21px;
-border: 1.4px solid #0072cf;
-box-shadow: none;
-opacity: 1;
-background: #eff9ff
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:focus,
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:focus span,
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:hover,
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:hover span {
-background: #eff9ff;
-color: #0072cf
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item span {
-color: #0072cf;
-border-radius: 8px
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:last-child {
-margin-right: 0
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items {
-border: 1px solid #0072cf;
-border-radius: 8px;
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {
-border: 1px solid #0072cf;
-}
+<style type='text/css'>
 
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-of-type {
-border: 0;
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {
-border: 0;
-}
-.embeddedServiceLiveAgentStateChatItem.chatMessage button {
-color: #0095ff;
-text-decoration: none!important
-}
-.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {
-width: 100%;
-margin-top: 2%
-}
-.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.agent.plaintextContent {
-color: var(--lwc-colorTextDefault, #333);
-background: #eff9ff;
-border-radius: 10px 10px 10px 10px;
-float: left;
-max-width: 100%;
-WIDTH: 94.6%;
-margin-left: 0
-}
-.dockableContainer ul.main-menu-list>li:first-child {
-display: none
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items.main-menu-list li {
-border-right: none;
-border-left: none;
-border-bottom: 1px solid #000
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items.main-menu-list li:last-of-type {
-border-bottom: 2px solid #FFD24F;
-border-radius:0;
-}
-
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li button {
-text-align: left;
-font-weight: 550;
-color: #0072cf;
-text-transform: uppercase;
-font-size: 75%;
-padding-left: 0;
-padding-right: 0;	
-margin-right: 0
-}
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li:nth-child(2) {
-border-right: none;
-border-left: none;
-border-bottom: 1px solid #000
-}
-.embeddedServiceLiveAgentStateChatMenuMessage ul.rich-menu-items.main-menu-list {
-border: 0;
-border-top: 2px solid #FFD24F;
-border-radius: 0;
-margin : 20px 0;	
-	
-}
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active {
-color: #0072cf
-}
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent ul.rich-menu-items .rich-menu-item:hover {
-color: #0095ff
-}
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent ul.main-menu-list .rich-menu-item:hover {
-color: #0072cf
-}
-.embeddedServiceLiveAgentStateChat .messageArea:focus {
-border: 0 solid #fff
-}
 button.chatbotStickyIcon { 
 position: fixed;    
 bottom: 1vh;    
@@ -635,146 +249,466 @@ button.chatbotStickyIcon img {
 height: 8vh;    
 width: 12vh;    
 border-radius: 2vh; 
-cursor: pointer;  
-content: url(https://pfizerpatientservices--helpdesk--c.visualforce.com/resource/1635411532000/Gen_Image);	
+cursor: pointer;    
 
-}   
-button.chatbotStickyIcon.minimized img {   
-content: url(https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/20-512.png);    
-width: 10vh;    
-}  
-
-.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
-.embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
-position: fixed;
-
-height: 70vh;
-border-radius: 0px	
-}
-
-.embeddedServiceSidebar.layout-docked .dockableContainer.hideDockablecontainer,
-.embeddedServiceSidebar.layout-float .dockableContainer.hideDockablecontainer {
-display: none
-}
-
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover,
-.embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active {
-color: #0072cf
-}
-.dockableContainer .waitingCancelChat{
-display:none;
-}
-
-.announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]{
-display:none;
-}
+} 
 
 
 
 
 
-.cb-nav-container {
-  background-color: #ebebeb;
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  height: 40px;
-  align-items: center;
-  padding: 0;
-  border: 1px solid #b6b6b6;
-}
-
-.cb-nav-item {
-  list-style: none;
-  flex: 1;
-  font-size: 12px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-right: 1px solid #b6b6b6;
-}
-
-.cb-nav-item:last-child {
-  border-right: 0px solid black;
-}
-
-body .dockableContainer .cb-nav-item a {
-  text-decoration: none;
-  color: #000;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-font-weight : bold;	
-}
- #cb-dynamic-nav-list {
-        display: none;
-    }
-
-
-.embeddedServiceLiveAgentStateChatItem.chatMessage button:hover, .embeddedServiceLiveAgentStateChatItem.chatMessage button:hover:focus, .embeddedServiceLiveAgentStateChatItem.chatMessage button:active,.embeddedServiceLiveAgentStateChatItem.chatMessage button:active:focus,.embeddedServiceLiveAgentStateChatItem.chatMessage button:active:hover{
-	background: none;
-	color: #0095ff;
-}	
-.dockableContainer embeddedservice-chat-header div#chatbot-new-header span:nth-child(1){
-	opacity: 0.7;
-	}	
-
-.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer{
- width:320px;
-}
-@media all and (max-width: 767px) {
-    #cb-dynamic-nav-list {
-        display: flex;
-	min-width:100%;
-    }
+ body .dockableContainer *{
+box-sizing: border-box;
+color : #383838;
+font-family: "Helvetica Neue LT W05_77 Bd Cn" !important;
+   }    
+       
+   .dockableContainer .FAQComp,
+   .dockableContainer .maincardTemp {
+   border-radius: 8px;
+   background: #FEF6E4;
+text-align: left;
+color: #383838;
+margin-bottom : -18px;
+   }
+   .dockableContainer .FAQComp div,
+   .dockableContainer .maincardTemp div {
+   margin: 0;
+   padding: 1em
+   }
+   .dockableContainer .maincardTemp .cardHeader {
+   margin: 0;
+   font-size: 14px
+   }
+   .dockableContainer .maincardTemp .cardBody a {
+  background: #F4B72E;
+padding: 10px;
+width: 100%;
+max-width: 100%;
+display: inline-block;
+color: #383838;
+text-decoration: none;
+box-sizing: border-box;
+border-radius: 22px;
+text-align: center;
+font-size: 13px;
+font-weight: 600;
+   }
+   .dockableContainer .FAQComp {
+   border: 1px solid #383838
+   }
+   .dockableContainer .FAQComp .FAQBody {
+    border-top: 1.4px solid #383838;
+   font-size: 14px
+   }
+   .dockableContainer .FAQComp .FAQHeader {
+   background: #fff;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   font-size: 14px
+   }
+   .dockableContainer embeddedservice-chat-header {
+   position: relative;
+   padding: 0 14px;
+   height: 100px;
+   max-height: 70px;
+  background-color: #F4B72E;
+   }
+   .dockableContainer embeddedservice-chat-header header .minimizeButton {
+   display: none
+   }
+   .dockableContainer embeddedservice-chat-header header .closeButton {
+   position: absolute;
+   top: 5px;
+   right: -7px;
+   }
+   .dockableContainer embeddedservice-chat-header header .closeButton svg {
+   width: 14px;
+   height: 14px
+   }
+   .dockableContainer embeddedservice-chat-header header.sidebarHeader {
+   padding: 0
+   }
+   .dockableContainer embeddedservice-chat-header header.sidebarHeader img {
+   max-width: 67px;
+   margin-right: 0;
+   max-height: 54px
+   }
+   .dockableContainer embeddedservice-chat-header header h2 {
+   font-weight: 700;
+   display: none;
+   }
    .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
-    position: absolute;
-    top: 11px;
-    z-index: 9999;
-    text-align: left;
-    left: 79px;
-    color: #fff;
-    line-height: 1.2;
-    font-weight: bold;
-}
-	
-.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer { 
-	margin: 0;
-	min-width:100%;
-	max-width: 100%;
-	max-height:100%;
-	height:80vh;
-	top:0;
-	right:0;
-	width : 100%
-}
-	
-/*li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatButtonMessage{
-	width:90.2%;
-}*/
-	
+   position: relative;
+bottom: 10vh;
+z-index: 9999;
+text-align: left;
+left: 10vh;
+color: #fff;
+line-height: 3.5vh;
+font-weight: bold;
+width: 75%;
+color: #383838;
+   }      
+   .dockableContainer embeddedservice-chat-header div:last-child span {
+   display: block;
+   font-size: 12px;
+   font-weight: normal;
+   }
+   .dockableContainer embeddedservice-chat-header button.closeButton:hover:before {
+   right: 0;
+   top: 2px
+   }
+   body .dockableContainer a {
+   color: #0095ff;
+   text-decoration: none
+   }
+   .chatMessage .chatContent .chat-content.agent,
+   li.wrapper.chatMessage.agent.withTimestamp.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage .chatContent {
+   background: #FEF6E4;
+   border-radius: 8px;
+   max-width: 100%;
+   float: none;
+   margin-left: 0;
+   text-align: left
+   }
+   .embeddedServiceHelpButton .helpButton .uiButton {
+    background-color: #F4B72E;
+   font-family: Arial, sans-serif
+   }
+   .embeddedServiceHelpButton .helpButton .uiButton:focus {
+   outline: 1px solid #F4B72E
+   }
+   .chasitorControls .chasitorText {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatInputFooter .chasitorControls {
+   margin: 0
+   }
+   .embeddedServiceLiveAgentStateChatInputFooter.dynamicResizeTextOneRow {
+   min-height: 0;
+   height: 5px
+   }
+   .embeddedServiceSidebarExtendedHeader .content .message {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatItem.agent .agentName {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChat .endChatContainer .endChatButton {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatItem .isLightningOutContext .avatar {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeDotDivider,
+   .embeddedServiceLiveAgentStateChatItem.agent .timeContent {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeDotDivider,
+   .embeddedServiceLiveAgentStateChatItem.agent .timeContent {
+   display: none
+   }
+   .dockableContainer .chat-content[c-chatMsg_chatMsg] {
+   max-width: 100%;
+   padding: 10px;
+   border-bottom-left-radius: 0;
+   float: none;
+   margin-left: 0
+   }
+   li.wrapper.chatMessage.chasitor.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage {
+   padding: 0 3px 1px 18px;
+   padding-top: 0;
+   padding-right: 22px;
+   padding-bottom: 0;
+   padding-left: 6px;
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
+   display: none
+   }
+   .dockableContainer .waitingMessage{
+   color: #383838;
+   font-size:12px;
+   margin-left:3em;
+   margin-right:3em;
+   }
+   .dockableContainer .waitingGreeting{
+   font-size:17px;
+font-weight:600;
+color: #383838;
+   }
+   .dockableContainer .waitingGreeting:before,.dockableContainer .waitingGreeting:after{
+font-size:14px;
+   font-weight:400;
+   display: block;
+color: #383838;
+   }
+   .dockableContainer .waitingGreeting:before{
+   content: 'Welcome to the ';
+   color:#383838;
 
-	
-}
-	.embeddedServiceSidebar.sidebarMaximized{
-	height: 0%;
-	}
+   }
+   .dockableContainer .waitingGreeting:after{
+   content: 'Virtual Assistant';
+   word-wrap: break-word;
+   color: #383838;
+
+   }
+   .dockableContainer .callBackText{
+   background: #F4F4F4;
+   text-align: left;
+   font-weight:550;
+   text-transform: uppercase;
+   font-size: 12px;
+   padding:1em;
+   border-radius: 8px;
+   margin-bottom: -18px;
+   }
+   .embeddedServiceLiveAgentStateChatItem.chatMessage {
+   margin-bottom: 0
+   }
+   button.rich-button-item.uiButton--default.uiButton.embeddedServiceLiveAgentStateChatButtonItem {
+   box-shadow: 0 0 0px 0 rgb(0 118 222 / 50%);
+   }
+   li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatButtonMessage {
+   border-radius: 0 0 10px 10px;
+   margin-top: -10px;
+   padding : 0 18px;
+
+   }
+   li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatButtonMessage .chatContent {
+   background: #FEF6E4;
+   display: flex;
+   margin-left: 0;
+   justify-content: center;
+   max-width: 100%;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
+   padding-bottom: 10px
+   }
+   li.wrapper.chatMessage.agent.withTimestamp.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage {
+
+   border-radius: 10px 10px 0 0;
+   padding: 0 18px;
+   }
+   embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
+   display: none
+   }
+
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button {
+   padding-left: 5%;
+   padding-right: 12%;
+   margin-right: 8%;
+   text-align: left;
+   font-size: 14px
+   }
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item {
+   margin-top: 10px;
+   padding: 5px 0;
+   min-width: 34%;
+   text-align: center;
+   border-radius: 21px;
+   border: 1.4px solid #383838;
+   box-shadow: none;
+   opacity: 1;
+  background: #FEF6E4;
+   }
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:focus,
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:focus span,
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:hover,
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:hover span {
+    color: #383838;
+   }
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item span {
+   color: #383838;
+border-radius: 8px;
+font-weight: 600;
+   }
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:last-child {
+   margin-right: 0
+   }
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items {
+   border: 1px solid #383838;
+   border-radius: 8px;
+   }
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {
+   border: 1px solid #F4B72E;
+   }
+   
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-of-type {
+   border: 0;
+   }
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {
+   border: 0;
+   }
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button {
+   color: #0095ff;
+   text-decoration: none!important
+   }
+   .embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {
+   width: 100%;
+   margin-top: 2%;
+   margin-bottom: 2%;
+   }
+   .embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.agent.plaintextContent {
+   color: var(--lwc-colorTextDefault, #333);
+   background: #FEF6E4;
+   border-radius: 10px 10px 10px 10px;
+   float: left;
+   max-width: 100%;
+   WIDTH: 94.6%;
+   margin-left: 0
+   }
+   .dockableContainer ul.main-menu-list>li:first-child {
+   display: none
+   }
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items.main-menu-list li {
+   border-right: none;
+   border-left: none;
+   border-bottom: 1px solid #000
+   }
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items.main-menu-list li:last-of-type {
+   border-bottom: 2px solid #68C4DD;
+   border-radius:0;
+   }
+   
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li button {
+   text-align: left;
+   font-weight: 550;
+   color: #383838;
+   text-transform: uppercase;
+   font-size: 12px;
+   padding-left: 0;
+   padding-right: 0;    
+   margin-right: 0;
+   height: 12vh;
+   padding-top : 2vh;
+   padding-bottom :2vh;
+   }
+   .embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li:nth-child(2) {
+   border-right: none;
+   border-left: none;
+   border-bottom: 1px solid #000
+   }
+   .embeddedServiceLiveAgentStateChatMenuMessage ul.rich-menu-items.main-menu-list {
+   border: 0;
+   border-top: 2px solid #68C4DD;
+   border-radius: 0;
+   margin : 20px 0; 
+       
+   }
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active {
+   color: #383838;
+   }
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent ul.rich-menu-items .rich-menu-item:hover {
+   color: #0095ff
+   }
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent ul.main-menu-list .rich-menu-item:hover {
+   color: #383838;
+   }
+   .embeddedServiceLiveAgentStateChat .messageArea:focus {
+   border: 0 solid #fff
+   }
+  
+   .chatbotStickyIcon.minimized {   
+   content: url(/images/misc/chatbot_button_inactive_genotropin.svg);    
+   
+   }  
+   
+   .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
+   .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
+   position: fixed;
+   border-radius: 0px;
+   width: 320px;
+   }
+   
+   .embeddedServiceSidebar.layout-docked .dockableContainer.hideDockablecontainer,
+   .embeddedServiceSidebar.layout-float .dockableContainer.hideDockablecontainer {
+   display: none
+   }
+   
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover,
+   .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active {
+   color: #F4B72E;
+   }
+   .dockableContainer .waitingCancelChat{
+   display:none;
+   }
+   
+   .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]{
+   display:none;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button:hover, .embeddedServiceLiveAgentStateChatItem.chatMessage button:hover:focus, .embeddedServiceLiveAgentStateChatItem.chatMessage button:active,.embeddedServiceLiveAgentStateChatItem.chatMessage button:active:focus,.embeddedServiceLiveAgentStateChatItem.chatMessage button:active:hover{
+       background: none;
+       color: #0095ff;
+   }    
+   .dockableContainer embeddedservice-chat-header div#chatbot-new-header span:nth-child(1){
+       opacity: 0.7;
+       }    
+   
+    .embeddedServiceSidebar.sidebarMaximized{
+
+    height: 0%;
+
+    }
+    .dockableContainer .uiOutputRichText {
+    display:none;
+    }
+
+   @media all and (max-width: 768px) {
+      .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
+       position: absolute;
+       top: 11px;
+       z-index: 9999;
+       text-align: left;
+       left: 79px;
+       color: #383838;
+       line-height: 1.2;
+       font-weight: bold;
+   }
+       
+   .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer { 
+       margin: 0;
+       min-width:100%;
+       max-width: 100%;
+       max-height:100%;
+       top:0;
+       right:0;
+       width : 100%;      
+   }
+       
+
+       
+   }
 </style>
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-  
-    
-    var initESW = function(gslbBaseURL) {
+var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = false; //Or false
         embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
@@ -796,18 +730,18 @@ font-weight : bold;
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
             
-            embedded_svc.init(
+           embedded_svc.init(
             'https://pfizerpatientservices--helpdesk.my.salesforce.com',
             'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
             gslbBaseURL,
             '00D22000000DPhW',
-            'Genotropin_Group',
+            'Vyndamax_Group',
             {
                 baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
                 deploymentId: '572220000008PQP',
-                buttonId: '573220000008ORC',
+                buttonId: '573220000008ORM',
                 baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Genotropin_Group',
+                eswLiveAgentDevName: 'Vyndamax_Group',
                 isOfflineSupportEnabled: false
             }
         );
@@ -822,20 +756,18 @@ font-weight : bold;
         document.body.appendChild(s);
     } else {
         initESW('https://service.force.com');
-    }
 </script>
 <script>
-   function initialBotLoad(e) {
+    function initialBotLoad(e) {
     if (e.srcElement.innerHTML == "Go Back" || e.srcElement.innerHTML == "Confirm End Chat") {
         getMenuListIndex();
     }
 }
 
 function getMenuListIndex() {
-    var len = document.getElementsByClassName("rich-menu-items").length;
-    for (var i = 0; i < len; i++) {
+    let len = document.getElementsByClassName("rich-menu-items").length;
+    for (let i = 0; i < len; i++) {
         if (document.getElementsByClassName("rich-menu-items")[i].children[0].innerText == "$$MainMenu$$") {
-            var index = i;
             formatMainMenu(i);
         }
     }
@@ -848,7 +780,7 @@ function formatMainMenu(classIndex) {
 function messageListener(e) {
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
-        var iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
+        let iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
        
         if(window.innerWidth > 768){
             iconEle.classList.add("minimized");
@@ -856,27 +788,27 @@ function messageListener(e) {
         getMenuListIndex();
     }
 
-    if ("method" in e.data && e.data.method == "session.updatePrimary") { 
+    if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
-            var newElement = document.createElement("div");
-            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin)</span><span> Virtual Assistant </span></p></div>';
+            let newElement = document.createElement("div");
+            newElement.innerHTML = '<div id="chatbot-new-header">YOUR HEART\'S MESSAGE <span> Virtual Assistant </span></div>';
             document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
     }
     if (e.data.data.event == "agentRichMessage") {
         if (e.data.data.params.items[0].text == "$$MainMenu$$") {
-            var classIndex = document.getElementsByClassName("rich-menu-items").length - 1;
+            let classIndex = document.getElementsByClassName("rich-menu-items").length - 1;
             formatMainMenu(classIndex);
         }
     }
 
 
     /* handle minimize icon change on close button click */
-    if ("method" in e.data && e.data.method == "session.deletedSessionData") { 
+    if ("method" in e.data && e.data.method == "session.deletedSessionData") {
         if (e.data.data.indexOf("ESW_IS_MINIMIZED") != -1) {
-            var el = document.getElementsByClassName("chatbotStickyIcon")[0];
-            var chatWindow = document.getElementsByClassName("dockableContainer")[0];
+            let el = document.getElementsByClassName("chatbotStickyIcon")[0];
+            let chatWindow = document.getElementsByClassName("dockableContainer")[0];
             el.classList.remove("minimized");
            
             chatWindow.classList.remove("hideDockablecontainer");
@@ -885,14 +817,14 @@ function messageListener(e) {
 
     if (e.data && typeof e.data === 'string') {
         if (e.data.indexOf('ChatEstablished') != -1) {
-            var message = {
+            let message = {
                 type: 'ChatEstablished',
                 chatKey: liveagent.chasitor.getChatKey()
             };
             window.opener.top.postMessage(message, '*');
         }
         else if (e.data.indexOf('ChatEnded') != -1) {
-            var message = {
+            let message = {
                 type: 'ChatEnded',
                 chatKey: liveagent.chasitor.getChatKey()
             };
@@ -904,8 +836,8 @@ function messageListener(e) {
 let globVar;
 
 function showEmbeddedDiv(el) {
-    var resultEmbServ = embedded_svc.bootstrapEmbeddedService();
-    var chatWindow = document.getElementsByClassName("dockableContainer")[0];
+    let resultEmbServ = embedded_svc.bootstrapEmbeddedService();
+    let chatWindow = document.getElementsByClassName("dockableContainer")[0];
     if (el.className.indexOf("minimized") > -1) {
         el.classList.remove("minimized");
         chatWindow.classList.add("hideDockablecontainer");
@@ -919,7 +851,6 @@ function showEmbeddedDiv(el) {
         }
     }
     globVar = true;
-    //getMenuListIndex();
 }
 
 if (window.addEventListener) {
@@ -933,16 +864,10 @@ document.addEventListener("click", initialBotLoad, false);
 
 /*All the below Code added by SF Team -Need review from Vasundhara*/
 embedded_svc.addEventHandler("afterMaximize",function(data){
-    /*if(/Android|webOS|iPad|iPhone|iPod|Blackberry/i.test(navigator.userAgent)) {
-        appendCSS();
-        displayPI();
-        checkBOT();
-    }*/
-   setBOTHeight();
-    if(window.innerWidth < 767) {
+    setBOTHeight();
+    if(window.innerWidth < 768) {
         
-         appendCSS();
-        displayPI();
+        appendCSS();
         checkBOT();
     }
 });
@@ -956,78 +881,42 @@ function appendCSS(){
 }
 let navDiv, navList, navItem, anchorItem;
 
-// getting links for the navbar
-async function fetchLinksJSON() {
-   // const response = await fetch("https://json-aws-testing.s3.us-east-2.amazonaws.com/data.json");
-   // const jsonData = await response.json();
-    //return jsonData;
-     return {
-    "Prescribing Information": "http://labeling.pfizer.com/ShowLabeling.aspx?id=577",
-    "Instructions for Use": "https://www.genotropin.com/how-to-use-genotropin"
-    };
-}
 
 
 
-//onload is because script runs before body has loaded
-//cant append to null body
 
-function displayPI(){
-    if(!document.getElementById("cb-dynamic-nav-list")){
-        navList = document.createElement('ul');
-        navList.className = 'cb-nav-container';
-        navList.id = 'cb-dynamic-nav-list';
 
-        navDiv = document.createElement("div");
-        navDiv.appendChild(navList);
-        document.body.appendChild(navDiv);
-        fetchLinksJSON().then(function(jsonData){
-        for (elem in jsonData){
-            anchorItem = document.createElement('a');
-            anchorItem.innerHTML = elem;
-            anchorItem.href = jsonData[elem];
-            anchorItem.target = "_blank";    
-            navItem = document.createElement('li');
-            navItem.className = 'cb-nav-item';
-            navItem.appendChild(anchorItem);
-            navList.appendChild(navItem);
-        }
-        })
-        .catch(error => console.error('Err>>',error))   
-        let dockable = document.getElementsByClassName("dockableContainer")[0];
-        dockable.prepend(navList);
-    }
-}
 
 function checkBOT() {
-   // getMenuListIndex();
     //NEED TO ADD CONDITION ONLY FOR MOBILE SCREEN
     if(globVar==undefined){ 
-        var el = document.getElementsByClassName("chatbotStickyIcon")[0]; 
+        let el = document.getElementsByClassName("chatbotStickyIcon")[0]; 
         el.classList.remove("minimized");
-        var chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
+        let chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
         chatWindow.classList.add("hideDockablecontainer");
-    }        
-}
+    }            
+} 
 function setBOTHeight(){
-	let iSIHeight =  parseInt(document.getElementById('block-views-isi-content-block-3').style.height);
-	let iconHeight = iSIHeight + 20;
-	let botHeight;
-	if(window.innerWidth > 767){
+    setTimeout(function(){
+        let iSIHeight = parseInt(document.getElementById('block-views-isi-content-block-3').style.height);
+        let iconHeight = iSIHeight + 20;
+        let botHeight;
+        if(window.innerWidth > 768){
 
-	botHeight = (window.innerHeight - (iconHeight + 80 ))+ 'px';
-	}else{
-	botHeight = (window.innerHeight - (iSIHeight+10))+ 'px';
-	}
-	document.getElementsByClassName('dockableContainer')[0].style.bottom = iconHeight+70+'px';
-	document.getElementsByClassName('dockableContainer')[0].style.height = botHeight;
+            botHeight = (window.innerHeight - (iconHeight + 80 ))+ 'px';
+            iconHeight = iconHeight+70;
+        }else{
+            botHeight = (window.innerHeight - (iSIHeight))+ 'px';
+            iconHeight = iSIHeight;
+        }
+        let botElement = document.getElementsByClassName('dockableContainer')[0];
+        if(botElement){
+            botElement.style.bottom = iconHeight+'px';
+            botElement.style.height = botHeight;
+        }
+    },600);
 }
-	function loadicon(){
-		let chaticon = document.getElementsByClassName('chatbotStickyIcon')[0];
-		chaticon.style.bottom = parseInt(document.getElementById('block-views-isi-content-block-3').style.height) + 20+'px';
-	}
-    window.onload=loadicon();
-	window.onresize=setBOTHeight();
+window.addEventListener('resize', setBOTHeight);
 	
 </script>
 
