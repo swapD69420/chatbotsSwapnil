@@ -767,6 +767,7 @@ var initESW = function(gslbBaseURL) {
 function getMenuListIndex() {
     let len = document.getElementsByClassName("rich-menu-items").length;
     for (let i = 0; i < len; i++) {
+	 console.log(document.getElementsByClassName("rich-menu-items")[i].children[0]);   
         if (document.getElementsByClassName("rich-menu-items")[i].children[0].innerText == "$$MainMenu$$") {
             formatMainMenu(i);
         }
