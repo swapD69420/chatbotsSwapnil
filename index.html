@@ -768,7 +768,7 @@ function getMenuListIndex() {
     let len = document.getElementsByClassName("rich-menu-items").length;
     for (let i = 0; i < len; i++) {
 	 console.log(document.getElementsByClassName("rich-menu-items")[i].children[0].innerText);   
-        if (document.getElementsByClassName("rich-menu-items")[i].children[0].innerText == "$$MainMenu$$") {
+        if (document.getElementsByClassName("rich-menu-items")[i].children[0].innerText.trim() == "$$MainMenu$$") {
             formatMainMenu(i);
         }
     }
