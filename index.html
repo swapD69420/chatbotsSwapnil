@@ -758,7 +758,7 @@ var initESW = function(gslbBaseURL) {
     }
 </script>
 <script>
-    function initialBotLoad(e) {
+function initialBotLoad(e) {
     if (e.srcElement.innerHTML == "Go Back" || e.srcElement.innerHTML == "Confirm End Chat") {
         getMenuListIndex();
     }
@@ -767,7 +767,6 @@ var initESW = function(gslbBaseURL) {
 function getMenuListIndex() {
     let len = document.getElementsByClassName("rich-menu-items").length;
     for (let i = 0; i < len; i++) {
-	 console.log(document.getElementsByClassName("rich-menu-items")[i].children[0].innerText);   
         if (document.getElementsByClassName("rich-menu-items")[i].children[0].innerText.trim() == "$$MainMenu$$") {
             formatMainMenu(i);
         }
@@ -792,12 +791,12 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
             let newElement = document.createElement("div");
-            newElement.innerHTML = '<div id="chatbot-new-header">YOUR HEART\'S MESSAGE <span> Virtual Assistant </span></div>';
+            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin) for injection</span><span> Virtual Assistant </span></p></div>';
             document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
     }
-    if (e.data.data.event == "agentRichMessage") {
+    if ("data" in e.data && "event" in e.data.data && e.data.data.event == "agentRichMessage") {
         if (e.data.data.params.items[0].text == "$$MainMenu$$") {
             let classIndex = document.getElementsByClassName("rich-menu-items").length - 1;
             formatMainMenu(classIndex);
@@ -811,7 +810,7 @@ function messageListener(e) {
             let el = document.getElementsByClassName("chatbotStickyIcon")[0];
             let chatWindow = document.getElementsByClassName("dockableContainer")[0];
             el.classList.remove("minimized");
-           
+            
             chatWindow.classList.remove("hideDockablecontainer");
         }
     }
@@ -841,7 +840,9 @@ function showEmbeddedDiv(el) {
     let chatWindow = document.getElementsByClassName("dockableContainer")[0];
     if (el.className.indexOf("minimized") > -1) {
         el.classList.remove("minimized");
-        chatWindow.classList.add("hideDockablecontainer");
+        if("classList" in chatWindow){
+            chatWindow.classList.add("hideDockablecontainer");
+        }
         
         
     } else { 
@@ -865,9 +866,8 @@ document.addEventListener("click", initialBotLoad, false);
 
 /*All the below Code added by SF Team -Need review from Vasundhara*/
 embedded_svc.addEventHandler("afterMaximize",function(data){
-    setBOTHeight();
-    if(window.innerWidth < 768) {
-        
+    displayPI();
+    if(window.innerWidth < 768) {       
         appendCSS();
         checkBOT();
     }
@@ -882,11 +882,45 @@ function appendCSS(){
 }
 let navDiv, navList, navItem, anchorItem;
 
+// getting links for the navbar
+async function fetchLinksJSON() {
+     return {
+        "Prescribing Information": "http://labeling.pfizer.com/ShowLabeling.aspx?id=577",
+        "Instructions for Use": "https://www.genotropin.com/how-to-use-genotropin"
+    };
+}
 
 
 
+//onload is because script runs before body has loaded
+//cant append to null body
 
+function displayPI(){
+    if(!document.getElementById("cb-dynamic-nav-list")){
+        navList = document.createElement('ul');
+        navList.className = 'cb-nav-container';
+        navList.id = 'cb-dynamic-nav-list';
+        navDiv = document.createElement("div");
+        navDiv.appendChild(navList);
+        document.body.appendChild(navDiv);
+        fetchLinksJSON().then(function(jsonData){
 
+        for (elem in jsonData){
+            anchorItem = document.createElement('a');
+            anchorItem.innerHTML = elem;
+            anchorItem.href = jsonData[elem];
+            anchorItem.target = "_blank";    
+            navItem = document.createElement('li');
+            navItem.className = 'cb-nav-item';
+            navItem.appendChild(anchorItem);
+            navList.appendChild(navItem);
+        }
+        })
+        .catch(error => console.error('Err>>',error))   
+        let dockable = document.getElementsByClassName("dockableContainer")[0];
+        dockable.prepend(navList);
+   }
+}
 
 function checkBOT() {
     //NEED TO ADD CONDITION ONLY FOR MOBILE SCREEN
@@ -894,32 +928,16 @@ function checkBOT() {
         let el = document.getElementsByClassName("chatbotStickyIcon")[0]; 
         el.classList.remove("minimized");
         let chatWindow = document.getElementsByClassName("dockableContainer")[0]; 
-        chatWindow.classList.add("hideDockablecontainer");
+        if(chatWindow!= undefined){
+            chatWindow.classList.add("hideDockablecontainer");
+        }
     }            
 } 
-function setBOTHeight(){
-    setTimeout(function(){
-        let iSIHeight = parseInt(document.getElementById('block-views-isi-content-block-3').style.height);
-        let iconHeight = iSIHeight + 20;
-        let botHeight;
-        if(window.innerWidth > 768){
 
-            botHeight = (window.innerHeight - (iconHeight + 80 ))+ 'px';
-            iconHeight = iconHeight+70;
-        }else{
-            botHeight = (window.innerHeight - (iSIHeight))+ 'px';
-            iconHeight = iSIHeight;
-        }
-        let botElement = document.getElementsByClassName('dockableContainer')[0];
-        if(botElement){
-            botElement.style.bottom = iconHeight+'px';
-            botElement.style.height = botHeight;
-        }
-    },600);
-}
-window.addEventListener('resize', setBOTHeight);
-	
+
 </script>
+	
+
 
 	
 </head>
