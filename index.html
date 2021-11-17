@@ -876,7 +876,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
             let newElement = document.createElement("div");
-            newElement.innerHTML = '<div id="chatbot-new-header">GENOTROPIN <p><span>(somatropin) for injection</span><span> Virtual Assistant </span></p></div>';
+            newElement.innerHTML = '<div id="chatbot-new-header">YOUR HEART\'S MESSAGE <span> Virtual Assistant </span></div>';
             document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
