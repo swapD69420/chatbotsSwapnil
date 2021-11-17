@@ -242,11 +242,15 @@ $.localScroll();
 
 <style type='text/css'>
 body .dockableContainer * {
-font-family: "Helvetica Neue LT W05_77 Bd Cn" !important;
+font-family: sans-serif;
 font-size: 14px;
 color: #383838;
 box-sizing: border-box;
 }
+.modalContainer.sidebarMaximized.layout-docked.embeddedServiceSidebar{
+z-index:99999;
+}	
+
 .dockableContainer .FAQComp,
 .dockableContainer .maincardTemp {
 border-radius: 8px;
@@ -337,6 +341,7 @@ font-size: 16px;
 font-size: 12px;
 line-height: 1.9;
 color : #383838;
+font-family: "Helvetica Neue LT W05_77 Bd Cn" !important;
 }
 .dockableContainer embeddedservice-chat-header div:last-child span {
 display: block;
@@ -610,10 +615,12 @@ border: none;
 border-radius: 50%;
 cursor: pointer;
 background: #F4B72E;
-background-image: url("https://www.iconfinder.com/icons/2303171/bubble_chat_comment_communication_message_speech_talk_icon");
+background-image: url(/images/misc/chatbot_button_active_vyndamax.svg);
+z-index: 99999;	
 }
 .chatbotStickyIcon.minimized {
-background-image: url("https://www.iconfinder.com/icons/2303135/arrow_back_left_refresh_renew_restart_icon");
+background-image: url(/images/misc/chatbot_button_inactive_vyndamax.svg);
+z-index: 99999;	
 }
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
@@ -677,9 +684,6 @@ justify-content: center;
 text-align: center;
 font-weight: bold;
 }
-#cb-dynamic-nav-list {
-display: none;
-}
 .embeddedServiceLiveAgentStateChatItem.chatMessage button:hover,
 .embeddedServiceLiveAgentStateChatItem.chatMessage button:hover:focus,
 .embeddedServiceLiveAgentStateChatItem.chatMessage button:active,
@@ -688,6 +692,9 @@ display: none;
 background: none;
 color: #0095ff;
 }
+.embeddedServiceSidebar.modalContainer {
+z-index: 9999;
+}	
 
 .embeddedServiceSidebar.sidebarMaximized {
 height: 0%;
@@ -697,8 +704,8 @@ display: none;
 }
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
-height: calc(80vh - 100px);
-bottom: calc(20vh + 80px);
+height: 80vh;
+bottom: 80px;
 right: 30px;
 }
 @media screen and (max-width: 1024px) and (orientation:landscape) {
@@ -711,16 +718,8 @@ right: 0;
 max-width: 100%;
 top: 0;
 }
-#cb-dynamic-nav-list {
-display: flex;
-min-width: 100%;
-}
 }
 @media all and (max-width: 768px) {
-#cb-dynamic-nav-list {
-display: flex;
-min-width: 100%;
-}
 .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
 position: absolute;
 top: 11px;
@@ -730,6 +729,7 @@ left: 79px;
 color: #383838;
 line-height: 1.2;
 font-weight: bold;
+font-family: "Helvetica Neue LT W05_77 Bd Cn" !important;
 }
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
