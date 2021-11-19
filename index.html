@@ -778,6 +778,7 @@ window.addEventListener("load", function (event) {
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	
+     
     var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = false; //Or false
         embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -801,16 +802,16 @@ window.addEventListener("load", function (event) {
         embedded_svc.settings.entryFeature = 'LiveAgent';
             
            embedded_svc.init(
-            'https://pfizerpatientservices--training.my.salesforce.com',
-            'https://training-pfizereinsteinbot.cs171.force.com/liveAgentSetupFlow',
+            'https://pfizerpatientservices--helpdesk.my.salesforce.com',
+            'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
             gslbBaseURL,
-            '00D530000008hQc',
+            '00D22000000DPhW',
             'Vyndamax_Group',
             {
-                baseLiveAgentContentURL: 'https://c.la4-c1cs-ia5.salesforceliveagent.com/content',
-                deploymentId: '57253000000Gmce',
-                buttonId: '57353000000CaUk',
-                baseLiveAgentURL: 'https://d.la4-c1cs-ia5.salesforceliveagent.com/chat',
+                baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
+                deploymentId: '572220000008PQP',
+                buttonId: '573220000008ORM',
+                baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
                 eswLiveAgentDevName: 'Vyndamax_Group',
                 isOfflineSupportEnabled: false
             }
