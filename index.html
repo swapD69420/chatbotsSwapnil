@@ -719,19 +719,23 @@ display:none;
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer, 
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer 
 { 
-    height: 75%; 
-    max-height: 100%; 
-    max-width: 94%; 
-    width: 100%; 
-    right:3%; 
-    left: 3%;
-    bottom:17vh 
+    margin: 0;
+min-width: 100%;
+max-width: 100%;
+max-height: 100%;
+top: 0;
+right: 0;
+width: 100%;
+height: 83vh;
 }
+ #cb-dynamic-nav-list {
+        display: flex;
+    }	
 }
 @media all and (max-width: 767px) {
-    #cb-dynamic-nav-list {
-        display: flex;
-    }
+ #cb-dynamic-nav-list {
+    display: flex;
+ }
 .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
 position: absolute;
 top: 11px;
@@ -752,8 +756,7 @@ max-height: 100%;
 top: 0;
 right: 0;
 width: 100%;
-height: 100vh;
-
+height: 83vh;
 }
 }  
 .dockableContainer embeddedservice-chat-header div#chatbot-new-header span:nth-child(1){
