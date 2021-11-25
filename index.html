@@ -928,6 +928,7 @@ body .dockableContainer .cb-nav-item a {
 
 <script>
  function initialBotLoad(e) {
+    console.log(document.querySelector(".rich-menu-items"));
     if (e.srcElement.innerHTML == "Go Back" || e.srcElement.innerHTML == "Confirm End Chat") {
         getMenuListIndex();
     }
@@ -1035,7 +1036,6 @@ document.addEventListener("click", initialBotLoad, false);
 
 /*All the below Code added by SF Team -Need review from Vasundhara*/
 embedded_svc.addEventHandler("afterMaximize",function(data){
-    console.log(document.querySelector(".rich-menu-items"));
     displayPI();
     if(window.innerWidth < 768) {       
         appendCSS();
