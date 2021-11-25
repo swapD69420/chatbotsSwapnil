@@ -1027,6 +1027,14 @@ function showEmbeddedDiv(el) {
     }
     globVar = true;
 }
+	
+window.onload = function() {
+	console.log(document.querySelector(".dockableContainer"));
+    if(document.querySelector(".dockableContainer").length > 0) {
+    	var objDiv = document.querySelector(".dockableContainer")[0];
+	objDiv.scrollTop = objDiv.scrollHeight;
+    }
+}
 
 if (window.addEventListener) {
     addEventListener('message', messageListener, false);
