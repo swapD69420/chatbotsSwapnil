@@ -1030,7 +1030,7 @@ function showEmbeddedDiv(el) {
 	
 window.onload = function() {
 	console.log(document.querySelector(".dockableContainer"));
-    if(document.querySelector(".dockableContainer").length > 0) {
+    if(document.querySelector(".dockableContainer") !== null) {
     	var objDiv = document.querySelector(".dockableContainer")[0];
 	objDiv.scrollTop = objDiv.scrollHeight;
     }
