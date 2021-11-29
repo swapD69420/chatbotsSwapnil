@@ -237,7 +237,7 @@ $.localScroll();
 	
 <style type='text/css'>
 body .dockableContainer * {
-  font-family: "Texta W05 Regular", arial, sans-serif !important;
+  font-family: "Avenir LT W01_55 Roman1475520",Arial,Verdana,sans-serif !important;
   font-size: 14px;
   color: #383838;
   box-sizing: border-box;
@@ -247,7 +247,7 @@ body .dockableContainer * {
 .dockableContainer .FAQComp,
 .dockableContainer .maincardTemp {
   border-radius: 8px;
-  background: #F8F2F4;
+  background: #F4F0F9;
   text-align: left;
   margin-bottom: -16px;
 }
@@ -266,7 +266,7 @@ body .dockableContainer * {
 }
 
 .dockableContainer .maincardTemp .cardBody a {
-  background: #E90649;
+  background: #430098;
   padding: 10px;
   width: 100%;
   max-width: 100%;
@@ -281,11 +281,11 @@ body .dockableContainer * {
 }
 
 .dockableContainer .FAQComp {
-  border: 1px solid #740324;
+  border: 1px solid #430098
 }
 
 .dockableContainer .FAQComp .FAQBody {
-  border-top: 1.4px solid #740324;
+  border-top: 1.4px solid #430098;
   font-size: 14px
 }
 
@@ -302,7 +302,7 @@ body .dockableContainer * {
   padding: 0 14px;
   height: 100px;
   max-height: 70px;
-  background-color: #E90649
+  background-color: #430098
 }
 
 .dockableContainer embeddedservice-chat-header header .minimizeButton {
@@ -327,7 +327,10 @@ body .dockableContainer * {
 .dockableContainer embeddedservice-chat-header header.sidebarHeader img {
   max-width: 67px;
   margin-right: 0;
-  max-height: 54px
+  max-height: 54px;
+  content: url(/images/misc/icon_circle_pfizer_48x48.svg) 
+ 
+
 }
 
 .dockableContainer embeddedservice-chat-header header h2 {
@@ -380,7 +383,7 @@ body .dockableContainer a {
 
 .chatMessage .chatContent .chat-content.agent,
 li.wrapper.chatMessage.agent.withTimestamp.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatMessage .chatContent {
-  background: #F8F2F4;
+  background: #F4F0F9;
   border-radius: 8px;
   max-width: 100%;
   float: none;
@@ -389,12 +392,12 @@ li.wrapper.chatMessage.agent.withTimestamp.embeddedServiceLiveAgentStateChatItem
 }
 
 .embeddedServiceHelpButton .helpButton .uiButton {
-  background-color: #E90649;
+  background-color: #430098;
   font-family: Arial, sans-serif
 }
 
 .embeddedServiceHelpButton .helpButton .uiButton:focus {
-  outline: 1px solid #E90649
+  outline: 1px solid #430098
 }
 
 .chasitorControls .chasitorText {
@@ -489,7 +492,7 @@ li.wrapper.chatMessage.chasitor.embeddedServiceLiveAgentStateChatItem.embeddedSe
 .dockableContainer .callBackText {
   background: #F4F4F4;
   text-align: left;
-  font-weight: 550;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   padding: 1em;
@@ -512,7 +515,7 @@ li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServi
 }
 
 li.wrapper.chatMessage.agent.embeddedServiceLiveAgentStateChatItem.embeddedServiceLiveAgentStateChatButtonMessage .chatContent {
-  background: #F8F2F4;
+  background: #F4F0F9;
   display: flex;
   margin-left: 0;
   justify-content: center;
@@ -546,10 +549,10 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
   min-width: 34%;
   text-align: center;
   border-radius: 21px;
-  border: 1.4px solid #740324;
+  border: 1.4px solid #430098;
   box-shadow: none;
   opacity: 1;
-  background: #F8F2F4;
+  background: #F4F0F9;
   font-weight:bold;
 }
 
@@ -557,12 +560,12 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:focus span,
 .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:hover,
 .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item:hover span {
-  background: #F8F2F4;
-  color: #E90649
+  background: #F4F0F9;
+  color: #430098
 }
 
 .embeddedServiceLiveAgentStateChatItem.chatMessage button.rich-button-item span {
-  color: #740324;
+  color: #430098;
   border-radius: 8px
 }
 
@@ -571,12 +574,12 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 }
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items {
-  border: 1px solid #740324;
+  border: 1px solid #430098;
   border-radius: 8px;
 }
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {
-  border: 1px solid #E90649;
+  border: 1px solid #430098;
 }
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-of-type {
@@ -599,7 +602,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 
 .embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.agent.plaintextContent {
   color: var(--lwc-colorTextDefault, #333);
-  background: #F8F2F4;
+  background: #F4F0F9;
   border-radius: 10px 10px 10px 10px;
   float: left;
   max-width: 100%;
@@ -619,14 +622,14 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 }
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items.main-menu-list li:last-of-type {
-  border-bottom: 2px solid #9B9B9B;
+  border-bottom: 2px solid #430098;
   border-radius: 0;
 }
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li button {
   text-align: left;
-  font-weight: 550;
-  color: #740324;
+  font-weight: bold;
+  color: #383838;
   text-transform: uppercase;
   font-size: 12px;
   padding-left: 0;
@@ -643,7 +646,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 
 .embeddedServiceLiveAgentStateChatMenuMessage ul.rich-menu-items.main-menu-list {
   border: 0;
-  border-top: 2px solid #9B9B9B;
+  border-top: 2px solid #430098;
   border-radius: 0;
   margin: 20px 0;
 
@@ -654,7 +657,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active {
-  color: #E90649
+  color: #430098
 }
 
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:active,
@@ -670,11 +673,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent ul.main-menu-list .rich-menu-item:hover {
-  color: #E90649
-}
-	
-.embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li button.rich-menu-itemOptionIsClicked {
-    color: rgb(116 3 36 / 46%);
+  color: #430098
 }
 
 .embeddedServiceLiveAgentStateChat .messageArea:focus {
@@ -683,14 +682,14 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 
 .chatbotStickyIcon {
   position: fixed;
-  right: 30%;
-  bottom: 15px;
+  right: calc((100% - 980px + 540px)/2);
+  bottom: 10vh;
   height: 50px;
   width: 50px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background: #E90649;
+  background: #430098;
   background-image: url(/images/misc/chatbot_button_active_talzenna.svg);
 }
 
@@ -703,7 +702,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
   position: fixed;
   border-radius: 0px;
   width: 320px;
-  right: 32%;
+  right: calc((100% - 980px + 600px)/2);
   left: unset;
 }
 
@@ -717,7 +716,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:focus:hover,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover,
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover:active {
-  color: #E90649
+  color: #430098
 }
 
 .dockableContainer .waitingCancelChat {
@@ -802,8 +801,8 @@ body .dockableContainer .cb-nav-item a {
 
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
-    height: calc(80vh - 80px);
-    bottom: calc(15vh + 10px);
+  height: calc(80vh - 80px);
+  bottom: calc(20vh + 10px);
 
 }
 
@@ -849,89 +848,93 @@ body .dockableContainer .cb-nav-item a {
     margin: 0;
     min-width: 100%;
     max-width: 100%;
-    max-height: 78%;
+    max-height: 70%;
     top: 0;
     right: 0;
     width: 100%;
-    height: 78%;
-   
+    height: 70VH;
+    bottom: 30vh;
   }
   
   .chatbotStickyIcon {
-  bottom: 24%;
-  right: 5%;
+  bottom: 32%;
   }
 
-
-
 }
-
 @media screen and (max-width: 768px) and (orientation:landscape) {
-
   .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
   .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
     width: 100%;
   }
 
-
 }
+</style>
+
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #430098;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #430098;
+	}
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-    var initESW = function(gslbBaseURL) {
-        embedded_svc.settings.displayHelpButton = false; //Or true
-        embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-        //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-        //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
-        //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-        // Settings for Chat
-        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-            // Returns a valid button ID.
-        //};
-        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
-        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-        embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
 
-        embedded_svc.init(
-            'https://pfizerpatientservices--helpdesk.my.salesforce.com',
-            'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
-            gslbBaseURL,
-            '00D22000000DPhW',
-            'Xeljanz_Group',
-            {
-                baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
-                deploymentId: '572220000008PQP',
-                buttonId: '573220000008OR7',
-                baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Xeljanz_Group',
-                isOfflineSupportEnabled: false
-            }
-        );
-    };
+		embedded_svc.init(
+			'https://pfizerpatientservices--training.my.salesforce.com',
+			'https://training-pfizereinsteinbot.cs171.force.com/liveAgentSetupFlow',
+			gslbBaseURL,
+			'00D530000008hQc',
+			'Ibrance_Group',
+			{
+				baseLiveAgentContentURL: 'https://c.la4-c1cs-ia5.salesforceliveagent.com/content',
+				deploymentId: '57253000000Gmce',
+				buttonId: '57353000000CaUz',
+				baseLiveAgentURL: 'https://d.la4-c1cs-ia5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Ibrance_Group',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
 
-    if (!window.embedded_svc) {
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://pfizerpatientservices--helpdesk.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-        s.onload = function() {
-            initESW(null);
-        };
-        document.body.appendChild(s);
-    } else {
-        initESW('https://service.force.com');
-    }
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://pfizerpatientservices--training.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
 </script>
 
 <script>
- function initialBotLoad(e) {
+function initialBotLoad(e) {
     if (e.srcElement.innerHTML == "Go Back" || e.srcElement.innerHTML == "Confirm End Chat") {
         getMenuListIndex();
     }
@@ -964,7 +967,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
             let newElement = document.createElement("div");
-             newElement.innerHTML = '<div id="chatbot-new-header">XELJANZ<sup>R</sup><p><span>(tofacitinib) capsules</span><span> Virtual Assistant </span></p></div>';
+             newElement.innerHTML = '<div id="chatbot-new-header">IBRANCE<p><span>(palbociclib)</span><span> Virtual Assistant </span></p></div>';
              document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
@@ -1027,14 +1030,6 @@ function showEmbeddedDiv(el) {
     }
     globVar = true;
 }
-	
-window.onload = function() {
-	console.log(document.querySelector(".dockableContainer"));
-    if(document.querySelector(".dockableContainer") !== null) {
-    	var objDiv = document.querySelector(".dockableContainer")[0];
-	objDiv.scrollTop = objDiv.scrollHeight;
-    }
-}
 
 if (window.addEventListener) {
     addEventListener('message', messageListener, false);
@@ -1066,8 +1061,8 @@ let navDiv, navList, navItem, anchorItem;
 // getting links for the navbar
 async function fetchLinksJSON() {
      return {
-        "Prescribing Information": "http://labeling.pfizer.com/ShowLabeling.aspx?id=959",
-        "Medication Guide": "http://labeling.pfizer.com/ShowLabeling.aspx?id=959§ion=MedGuide"
+        "Patient Prescribing Information": "http://labeling.pfizer.com/ShowLabeling.aspx?id=11046§ion=PPI",
+        "Full Prescribing Information": "http://labeling.pfizer.com/ShowLabeling.aspx?id=11046§ion=PPI"
     };
 }
 
@@ -1114,8 +1109,6 @@ function checkBOT() {
         }
     }            
 } 
-
-    
 </script>
 	
 </head>
