@@ -990,7 +990,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
         if (document.getElementById("chatbot-new-header") == null) {
             let newElement = document.createElement("div");
-             newElement.innerHTML = '<div id="chatbot-new-header"><img embeddedservice-chatheader_chatheader="" src="https://www.knowpneumonia.com/sites/default/themes/bootstrap_kp/logo.png" alt=""><p><span> Virtual Assistant </span></p></div>';
+             newElement.innerHTML = '<div id="chatbot-new-header"><div class="chatbot-header-left-child">KNOW</div><div class="chatbot-header-right-child">PNEUMONIA</div><p><span> Virtual Assistant </span></p></div>';
              document.querySelectorAll("embeddedservice-chat-header")[0].appendChild(newElement);
             appendCSS();
         }
