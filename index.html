@@ -338,6 +338,37 @@ body .dockableContainer * {
   line-height: 1;
   font-weight: bold;
   font-size: 16px;
+  width: 50%;
+}
+
+.dockableContainer embeddedservice-chat-header div#chatbot-new-header .chatbot-header-left-child {
+    background: #7B3087;
+    width: 40%;
+    position: relative;
+    float: left;
+    color: #fff;
+    padding: 2% 4%;
+}
+
+.dockableContainer embeddedservice-chat-header div#chatbot-new-header .chatbot-header-left-child:after{
+    background: #fff;
+    position: absolute;
+    content: "";
+    display: block;
+    right: 0%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2.5vh 0 2.5vh 1vh;
+    border-color: transparent transparent transparent #7B3087;
+}
+
+.dockableContainer embeddedservice-chat-header div#chatbot-new-header .chatbot-header-right-child {
+    background: #fff;
+    width: 60%;
+    float: right;
+    padding: 2% 4%;
 }
 
 .dockableContainer embeddedservice-chat-header div#chatbot-new-header sup{
@@ -353,7 +384,8 @@ body .dockableContainer * {
   font-size: 12px;
   line-height: 0.3;
   color: #7B3087;
-  font-weight: bold;;
+  font-weight: bold;
+  margin-top: 22%;
 }
 .dockableContainer embeddedservice-chat-header div#chatbot-new-header img{
   max-width: 230px;
@@ -676,7 +708,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 
 .chatbotStickyIcon {
   position: fixed;
-  right: 15px;
+  right: 271px;
   bottom: 15px;
   height: 50px;
   width: 50px;
@@ -696,7 +728,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
   position: fixed;
   border-radius: 0px;
   width: 320px;
-  right: 40px;
+  right: 295px;
   left: unset;
 }
 
@@ -727,8 +759,49 @@ color: #bdb8b8;
 }
 
 
+.cb-nav-container {
+  background-color: #ebebeb;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 40px;
+  align-items: center;
+  padding: 0;
+  border: 1px solid #b6b6b6;
+}
 
+.cb-nav-item {
+  list-style: none;
+  flex: 1;
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #b6b6b6;
+}
 
+.cb-nav-item:last-child {
+  border-right: 0px solid black;
+}
+
+body .dockableContainer .cb-nav-item a {
+  text-decoration: none;
+  color: #000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+#cb-dynamic-nav-list {
+  display: none;
+}
 
 
 .embeddedServiceLiveAgentStateChatItem.chatMessage button:hover,
@@ -757,7 +830,7 @@ color: #bdb8b8;
 .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
 .embeddedServiceSidebar.layout-float .dockableContainer.showDockableContainer {
   height: calc(80vh - 80px);
-  bottom: 90px;
+  bottom: calc(20vh + 10px);
 
 }
 
@@ -772,12 +845,24 @@ color: #bdb8b8;
     max-width: 100%;
     top: 0;
   }
+  
+  .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
+      width: 20%;
+  }
 
-
+  #cb-dynamic-nav-list {
+    display: flex;
+    min-width: 100%;
+  }
 
 }
 
 @media all and (max-width: 768px) {
+  #cb-dynamic-nav-list {
+    display: flex;
+    min-width: 100%;
+    
+  }
 
   .dockableContainer embeddedservice-chat-header div#chatbot-new-header {
     position: absolute;
@@ -788,6 +873,7 @@ color: #bdb8b8;
     color: #fff;
     line-height: 1.2;
     font-weight: bold;
+    width: 20%;
   }
 
   .embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer,
@@ -795,14 +881,17 @@ color: #bdb8b8;
     margin: 0;
     min-width: 100%;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 70%;
     top: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 70VH;
+    bottom: 30vh;
   }
   
-
+  .chatbotStickyIcon {
+  bottom: 32%;
+  }
 
 }
 @media screen and (max-width: 768px) and (orientation:landscape) {
