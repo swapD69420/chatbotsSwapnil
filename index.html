@@ -987,7 +987,11 @@ function formatMainMenu(classIndex) {
 }
 
 function messageListener(e) {
-	console.log('event details 990 ',e);
+	//console.log('event details 990 ',e);
+	if("method" in e.data && e.data.method == "liveagent.event" && "data" in e.data && e.data.data.event == "chasitorChatEstablished"){
+		console.log('992 ',document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0]);    
+
+	}
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         let iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
