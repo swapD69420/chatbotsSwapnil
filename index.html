@@ -752,7 +752,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 }
 
 .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement] {
-  display: none;
+  //display: none;
 }
 
 
@@ -987,7 +987,7 @@ function formatMainMenu(classIndex) {
 }
 
 function messageListener(e) {
-	//console.log('event details 990 ',e);
+	console.log('event details 990 ',e);
 	if("method" in e.data && e.data.method == "liveagent.event" && "data" in e.data && e.data.data.event == "chasitorChatEstablished"){
 		console.log('992 ',document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0]);    
 
@@ -1086,7 +1086,7 @@ document.addEventListener("click", initialBotLoad, false);
 embedded_svc.addEventHandler("afterMaximize",function(data){
     if(navigator.userAgent.indexOf("Firefox") != -1 && navigator.userAgent.indexOf("Android") != -1){
 	    //alert ('firefox');
-    	document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0].style.display = 'block';	    
+    	//document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0].style.display = 'block';	    
     }
     if(window.innerWidth < 768) {       
         appendCSS();
