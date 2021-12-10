@@ -752,9 +752,16 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 }
 
 .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement] {
-  //display: none;
+  display: none;
 }
 
+/*This will work for firefox*/
+@-moz-document url-prefix() {
+    .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]{
+        display:block !important;
+	
+    }
+}
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li button.rich-menu-itemOptionIsClicked {
 color: #bdb8b8;
@@ -988,10 +995,10 @@ function formatMainMenu(classIndex) {
 
 function messageListener(e) {
 	//console.log('event details 990 ',e);
-	if("method" in e.data && e.data.method == "liveagent.event" && "data" in e.data && e.data.data.event == "chasitorChatEstablished" ){
+	/*if("method" in e.data && e.data.method == "liveagent.event" && "data" in e.data && e.data.data.event == "chasitorChatEstablished" ){
 		console.log('992 ',document.querySelector('.announcement'));    
 
-	}
+	}*/
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         let iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
