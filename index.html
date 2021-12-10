@@ -987,6 +987,7 @@ function formatMainMenu(classIndex) {
 }
 
 function messageListener(e) {
+	console.log('event details 990 ',e);
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         let iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
@@ -1000,7 +1001,7 @@ function messageListener(e) {
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
 	 if(navigator.userAgent.indexOf("Firefox") != -1 ){
 	    alert ('firefox browser');
-    	    document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0].style.display = 'block';	    
+    	    //document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0].style.display = 'block';	    
     	}
         if (document.getElementById("chatbot-new-header") == null) {
             let newElement = document.createElement("div");
