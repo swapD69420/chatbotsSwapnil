@@ -998,8 +998,8 @@ function messageListener(e) {
     }
 
     if ("method" in e.data && e.data.method == "session.updatePrimary") {
-	 if(navigator.userAgent.indexOf("Firefox") != -1 && navigator.userAgent.indexOf("Android") != -1){
-	    //alert ('firefox');
+	 if(navigator.userAgent.indexOf("Firefox") != -1 ){
+	    alert ('firefox browser');
     	    document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0].style.display = 'block';	    
     	}
         if (document.getElementById("chatbot-new-header") == null) {
