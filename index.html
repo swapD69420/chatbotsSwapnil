@@ -755,13 +755,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
   display: none;
 }
 
-/*This will work for firefox*/
-@-moz-document url-prefix() {
-    .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]{
-        display:block !important;
-	
-    }
-}
+
 
 .embeddedServiceLiveAgentStateChatItem .chatContent ul.main-menu-list li button.rich-menu-itemOptionIsClicked {
 color: #bdb8b8;
@@ -875,6 +869,16 @@ body .dockableContainer .cb-nav-item a {
 }
 
 @media all and (max-width: 768px) {
+	
+/*This will work for firefox in android device*/	
+@supports not (-webkit-touch-callout: none) {
+  @-moz-document url-prefix() {
+    .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]{
+	display:block;
+
+    }
+ }
+}
   #cb-dynamic-nav-list {
     display: flex;
     min-width: 100%;
