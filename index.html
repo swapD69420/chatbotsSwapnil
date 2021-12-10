@@ -752,7 +752,7 @@ embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
 }
 
 .announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement] {
-  display: none;
+  //display: none;
 }
 
 
@@ -1075,7 +1075,13 @@ document.addEventListener("click", initialBotLoad, false);
 
 /*All the below Code added by SF Team -Need review from Vasundhara*/
 embedded_svc.addEventHandler("afterMaximize",function(data){
-    
+    if(navigator.userAgent.indexOf("Firefox") == -1 ){
+	    alert ('firefox');
+    	    if(document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]'))
+	    {
+		    document.getElementsByClassName('announcement[embeddedService-chatHeaderAnnouncement_chatHeaderAnnouncement]')[0].style.display = 'none';
+	    }
+    }
     if(window.innerWidth < 768) {       
         appendCSS();
         checkBOT();
