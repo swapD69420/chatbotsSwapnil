@@ -883,7 +883,7 @@ function formatMainMenu(classIndex) {
 }
 
 function messageListener(e) {
-if(e.data&&typeofe.data==="object"){ 	
+if(e.data && typeof e.data==="object"){ 	
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         let iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
