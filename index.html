@@ -883,6 +883,7 @@ function formatMainMenu(classIndex) {
 }
 
 function messageListener(e) {
+if(e.data&&typeofe.data==="object"){ 	
     if ("method" in e.data && e.data.method == "liveagent.restored") {
         appendCSS();
         let iconEle = document.getElementsByClassName("chatbotStickyIcon")[0];
@@ -919,7 +920,7 @@ function messageListener(e) {
             chatWindow.classList.remove("hideDockablecontainer");
         }
     }
-
+}
     if (e.data && typeof e.data === 'string') {
         if (e.data.indexOf('ChatEstablished') != -1) {
             let message = {
