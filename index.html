@@ -243,29 +243,19 @@ li.wrapper.chatMessage.chasitor.embeddedServiceLiveAgentStateChatItem.embeddedSe
 }
 
 .dockableContainer .waitingMessage {
-  color: #383838;
-  font-size: 10px;
-  margin-left: 2em;
-  margin-right: 2em;
+ display:none;	
 }
 
-.dockableContainer .waitingMessage:before {
+.dockableContainer .waitingGreeting:after {
   color: #383838;
   font-size: 10px;
-  content:'XELJANZ is also known as tofacitinib \a and is a prescription medicine \a \a Please see full Prescribing Information \a including BOXED WARNING and \a Medication Guide';
+  content:'Virtual Assistant \a \a XELJANZ is also known as tofacitinib \a and is a prescription medicine \a \a Please see full Prescribing Information \a including BOXED WARNING and \a Medication Guide \a \a This resource is intended for U.S. residents only. \a \a PP-XEL-USA-7183 © 2022 Pfizer Inc.\a All rights reserved. February 2022';
   display: block;
   margin-bottom: 1em;
   white-space: pre;
 }
 
-.dockableContainer .waitingMessage:after {
-  color: #383838;
-  margin-top:20px;
-  font-size: 10px;
-  content:'PP-XEL-USA-7183 © 2022 Pfizer Inc.\a All rights reserved. February 2022';
-  display: block;
-  white-space: pre
-}
+
 
 .dockableContainer .waitingGreeting {
   font-size: 22px;
@@ -273,22 +263,18 @@ li.wrapper.chatMessage.chasitor.embeddedServiceLiveAgentStateChatItem.embeddedSe
   font-weight: bold;
 }
 
-.dockableContainer .waitingGreeting:before,
-.dockableContainer .waitingGreeting:after {
-  font-size: 14px;
-  font-weight: 400;
-  display: block;
-  color: #383838;
-}
+
 
 .dockableContainer .waitingGreeting:before {
   content: 'Welcome to the ';
+   color: #383838;
+  font-size: 10px;
+  display: block;
+  margin-bottom: 1em;
+  white-space: pre;
 }
 
-.dockableContainer .waitingGreeting:after {
-  content: 'Virtual Assistant';
-  word-wrap: break-word;
-}
+
 
 .dockableContainer .callBackText {
   background: #F4F4F4;
